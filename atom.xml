@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Onort</title>
+  <subtitle>Kaotik Halde Tarifler, Kopyalar</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2016-11-05T20:50:55.057Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Onort</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Gulp Pluginler</title>
+    <link href="http://yoursite.com/gulp-pluginler/"/>
+    <id>http://yoursite.com/gulp-pluginler/</id>
+    <published>2016-11-05T20:37:39.000Z</published>
+    <updated>2016-11-05T20:50:55.057Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul>
+<li>List gulp plugins with short description</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;TODO&quot;&gt;&lt;a href=&quot;#TODO&quot; class=&quot;headerlink&quot; title=&quot;TODO&quot;&gt;&lt;/a&gt;TODO&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;List gulp plugins with short description&lt;/li&gt;
+&lt;/ul&gt;
+
+    
+    </summary>
+    
+      <category term="Javascript" scheme="http://yoursite.com/kategori/Javascript/"/>
+    
+    
+      <category term="gulp" scheme="http://yoursite.com/tags/gulp/"/>
+    
+      <category term="build tool" scheme="http://yoursite.com/tags/build-tool/"/>
+    
+      <category term="front-end" scheme="http://yoursite.com/tags/front-end/"/>
+    
+      <category term="javascript tooling" scheme="http://yoursite.com/tags/javascript-tooling/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VS Code Bağzı Kısayollar</title>
+    <link href="http://yoursite.com/vs-code-kisayollar/"/>
+    <id>http://yoursite.com/vs-code-kisayollar/</id>
+    <published>2016-11-05T20:37:15.000Z</published>
+    <updated>2016-11-05T20:52:50.936Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;TODO&quot;&gt;&lt;a href=&quot;#TODO&quot; class=&quot;headerlink&quot; title=&quot;TODO&quot;&gt;&lt;/a&gt;TODO&lt;/h2&gt;
+    
+    </summary>
+    
+      <category term="Genel" scheme="http://yoursite.com/kategori/Genel/"/>
+    
+    
+      <category term="editör" scheme="http://yoursite.com/tags/editor/"/>
+    
+      <category term="kopya" scheme="http://yoursite.com/tags/kopya/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Javascript Higher Order Fonksiyonlar</title>
+    <link href="http://yoursite.com/javascript-higher-order-function/"/>
+    <id>http://yoursite.com/javascript-higher-order-function/</id>
+    <published>2016-11-05T20:36:52.000Z</published>
+    <updated>2016-11-05T20:51:11.241Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul>
+<li>Add short description what higher order functions is</li>
+<li>Add a simple example</li>
+<li>(Add a complex example?)</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;TODO&quot;&gt;&lt;a href=&quot;#TODO&quot; class=&quot;headerlink&quot; title=&quot;TODO&quot;&gt;&lt;/a&gt;TODO&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Add short description what higher order functions is&lt;/li
+    
+    </summary>
+    
+      <category term="Javascript" scheme="http://yoursite.com/kategori/Javascript/"/>
+    
+    
+      <category term="vanilla javascript" scheme="http://yoursite.com/tags/vanilla-javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React Higher Order Component Olayı</title>
+    <link href="http://yoursite.com/react-higher-order-component/"/>
+    <id>http://yoursite.com/react-higher-order-component/</id>
+    <published>2016-11-05T20:36:14.000Z</published>
+    <updated>2016-11-05T20:52:22.073Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul>
+<li>Short description</li>
+<li>Use case and example</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;TODO&quot;&gt;&lt;a href=&quot;#TODO&quot; class=&quot;headerlink&quot; title=&quot;TODO&quot;&gt;&lt;/a&gt;TODO&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Short description&lt;/li&gt;
+&lt;li&gt;Use case and example&lt;/li&gt;
+&lt;/u
+    
+    </summary>
+    
+      <category term="React" scheme="http://yoursite.com/kategori/React/"/>
+    
+    
+      <category term="front-end" scheme="http://yoursite.com/tags/front-end/"/>
+    
+      <category term="react" scheme="http://yoursite.com/tags/react/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Node.js Postgres Bağlantı</title>
+    <link href="http://yoursite.com/nodejs-postgres-baglanti/"/>
+    <id>http://yoursite.com/nodejs-postgres-baglanti/</id>
+    <published>2016-11-05T20:35:43.000Z</published>
+    <updated>2016-11-05T20:51:47.661Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul>
+<li>Needed npm packages</li>
+<li>Example conenction</li>
+<li>Example query, select</li>
+<li>Links</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;TODO&quot;&gt;&lt;a href=&quot;#TODO&quot; class=&quot;headerlink&quot; title=&quot;TODO&quot;&gt;&lt;/a&gt;TODO&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Needed npm packages&lt;/li&gt;
+&lt;li&gt;Example conenction&lt;/li&gt;
+&lt;li
+    
+    </summary>
+    
+      <category term="Node.js" scheme="http://yoursite.com/kategori/Node-js/"/>
+    
+    
+      <category term="node" scheme="http://yoursite.com/tags/node/"/>
+    
+      <category term="database" scheme="http://yoursite.com/tags/database/"/>
+    
+      <category term="postgres" scheme="http://yoursite.com/tags/postgres/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Node.js MySQL Bağlantı</title>
+    <link href="http://yoursite.com/nodejs-mysql-baglanti/"/>
+    <id>http://yoursite.com/nodejs-mysql-baglanti/</id>
+    <published>2016-11-05T20:35:29.000Z</published>
+    <updated>2016-11-05T20:51:29.425Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul>
+<li>Needed npm packages</li>
+<li>Example conenction</li>
+<li>Example query, select</li>
+<li>Links</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;TODO&quot;&gt;&lt;a href=&quot;#TODO&quot; class=&quot;headerlink&quot; title=&quot;TODO&quot;&gt;&lt;/a&gt;TODO&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Needed npm packages&lt;/li&gt;
+&lt;li&gt;Example conenction&lt;/li&gt;
+&lt;li
+    
+    </summary>
+    
+      <category term="Node.js" scheme="http://yoursite.com/kategori/Node-js/"/>
+    
+    
+      <category term="node" scheme="http://yoursite.com/tags/node/"/>
+    
+      <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
+    
+      <category term="database" scheme="http://yoursite.com/tags/database/"/>
+    
+  </entry>
+  
+</feed>
