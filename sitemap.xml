@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/gulp-pluginler/</loc>
+    
+    <lastmod>2016-11-06T14:40:14.042Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/vs-code-kisayollar/</loc>
     
-    <lastmod>2016-11-05T20:52:50.936Z</lastmod>
+    <lastmod>2016-11-06T13:36:27.884Z</lastmod>
     
   </url>
   
@@ -33,13 +40,6 @@
     <loc>http://yoursite.com/javascript-higher-order-function/</loc>
     
     <lastmod>2016-11-05T20:51:11.241Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/gulp-pluginler/</loc>
-    
-    <lastmod>2016-11-05T20:50:55.057Z</lastmod>
     
   </url>
   

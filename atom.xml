@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-11-05T20:50:55.057Z</updated>
+  <updated>2016-11-05T20:51:11.241Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,64 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Gulp Pluginler</title>
-    <link href="http://yoursite.com/gulp-pluginler/"/>
-    <id>http://yoursite.com/gulp-pluginler/</id>
-    <published>2016-11-05T20:37:39.000Z</published>
-    <updated>2016-11-05T20:50:55.057Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul>
-<li>List gulp plugins with short description</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;TODO&quot;&gt;&lt;a href=&quot;#TODO&quot; class=&quot;headerlink&quot; title=&quot;TODO&quot;&gt;&lt;/a&gt;TODO&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;List gulp plugins with short description&lt;/li&gt;
-&lt;/ul&gt;
-
-    
-    </summary>
-    
-      <category term="Javascript" scheme="http://yoursite.com/kategori/Javascript/"/>
-    
-    
-      <category term="gulp" scheme="http://yoursite.com/tags/gulp/"/>
-    
-      <category term="build tool" scheme="http://yoursite.com/tags/build-tool/"/>
-    
-      <category term="front-end" scheme="http://yoursite.com/tags/front-end/"/>
-    
-      <category term="javascript tooling" scheme="http://yoursite.com/tags/javascript-tooling/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VS Code Bağzı Kısayollar</title>
-    <link href="http://yoursite.com/vs-code-kisayollar/"/>
-    <id>http://yoursite.com/vs-code-kisayollar/</id>
-    <published>2016-11-05T20:37:15.000Z</published>
-    <updated>2016-11-05T20:52:50.936Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;TODO&quot;&gt;&lt;a href=&quot;#TODO&quot; class=&quot;headerlink&quot; title=&quot;TODO&quot;&gt;&lt;/a&gt;TODO&lt;/h2&gt;
-    
-    </summary>
-    
-      <category term="Genel" scheme="http://yoursite.com/kategori/Genel/"/>
-    
-    
-      <category term="editör" scheme="http://yoursite.com/tags/editor/"/>
-    
-      <category term="kopya" scheme="http://yoursite.com/tags/kopya/"/>
-    
-  </entry>
   
   <entry>
     <title>Javascript Higher Order Fonksiyonlar</title>
@@ -199,6 +141,275 @@
       <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
     
       <category term="database" scheme="http://yoursite.com/tags/database/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VS Code Kısayollar</title>
+    <link href="http://yoursite.com/vs-code-kisayollar/"/>
+    <id>http://yoursite.com/vs-code-kisayollar/</id>
+    <published>2016-10-20T20:37:15.000Z</published>
+    <updated>2016-11-06T13:36:27.884Z</updated>
+    
+    <content type="html"><![CDATA[<p>Visual Studio Code (Linux) için klavye kısayolları derleme.</p>
+<h2 id="Genel-Editor-Kisayollari"><a href="#Genel-Editor-Kisayollari" class="headerlink" title="Genel Editör Kısayolları"></a>Genel Editör Kısayolları</h2><table>
+<thead>
+<tr>
+<th>Kısayol</th>
+<th>Nedir?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Ctrl+Shift+P</code></td>
+<td>Command Palette</td>
+</tr>
+<tr>
+<td><code>Ctrl+P</code></td>
+<td>Quick Open</td>
+</tr>
+<tr>
+<td><code>F2</code></td>
+<td>Rename</td>
+</tr>
+<tr>
+<td><code>Ctrl+\</code></td>
+<td>Split editor</td>
+</tr>
+</tbody>
+</table>
+<a id="more"></a>
+<h2 id="Hareketli"><a href="#Hareketli" class="headerlink" title="Hareketli"></a>Hareketli</h2><table>
+<thead>
+<tr>
+<th>Kısayol</th>
+<th>Nedir?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Alt+ ↓ - ↑</code></td>
+<td>Move line down/up</td>
+</tr>
+<tr>
+<td><code>Home - End</code></td>
+<td>Go to beginning/end of line</td>
+</tr>
+<tr>
+<td><code>Ctrl+ Home - End</code></td>
+<td>Go to beginning/end of file</td>
+</tr>
+<tr>
+<td><code>Ctrl+Enter</code></td>
+<td>Insert line below</td>
+</tr>
+<tr>
+<td><code>Ctrl+Shift+Enter</code></td>
+<td>Insert line above</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Secmece"><a href="#Secmece" class="headerlink" title="Seçmece"></a>Seçmece</h2><table>
+<thead>
+<tr>
+<th>Kısayol</th>
+<th>Nedir?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Ctrl+D</code></td>
+<td>Add selection to next Find match</td>
+</tr>
+<tr>
+<td><code>Ctrl+I</code></td>
+<td>Select current line</td>
+</tr>
+<tr>
+<td><code>Ctrl+Shift+L</code></td>
+<td>Select all occurrences of current selection</td>
+</tr>
+<tr>
+<td><code>Ctrl+H</code></td>
+<td>Replace</td>
+</tr>
+<tr>
+<td><code>Ctrl+/</code></td>
+<td>Toggle line comment</td>
+</tr>
+<tr>
+<td><code>Ctrl+Shift+ [ - ]</code></td>
+<td>Fold/unfold region</td>
+</tr>
+<tr>
+<td><code>Ctrl+Shift+k</code></td>
+<td>Delete line</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Seferi"><a href="#Seferi" class="headerlink" title="Seferi"></a>Seferi</h2><table>
+<thead>
+<tr>
+<th>Kısayol</th>
+<th>Nedir?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Ctrl+G</code></td>
+<td>Go to Line…</td>
+</tr>
+<tr>
+<td><code>Ctrl+P</code></td>
+<td>Go to File..</td>
+</tr>
+<tr>
+<td><code>Ctrl+Shift+O</code></td>
+<td>Go to Symbol…</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Yardimci"><a href="#Yardimci" class="headerlink" title="Yardımcı"></a>Yardımcı</h2><table>
+<thead>
+<tr>
+<th>Kısayol</th>
+<th>Nedir?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Ctrl+Space</code></td>
+<td>Trigger suggestion</td>
+</tr>
+<tr>
+<td><code>Ctrl+Shift+Space</code></td>
+<td>Trigger parameter hints</td>
+</tr>
+<tr>
+<td><code>Ctrl+K V</code></td>
+<td>Open Markdown preview to the side</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf" target="_blank" rel="external">Tüm liste için…</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Visual Studio Code (Linux) için klavye kısayolları derleme.&lt;/p&gt;
+&lt;h2 id=&quot;Genel-Editor-Kisayollari&quot;&gt;&lt;a href=&quot;#Genel-Editor-Kisayollari&quot; class=&quot;headerlink&quot; title=&quot;Genel Editör Kısayolları&quot;&gt;&lt;/a&gt;Genel Editör Kısayolları&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Kısayol&lt;/th&gt;
+&lt;th&gt;Nedir?&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Ctrl+Shift+P&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Command Palette&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Ctrl+P&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Quick Open&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;F2&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Rename&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Ctrl+\&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Split editor&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+    
+    </summary>
+    
+      <category term="Kopya" scheme="http://yoursite.com/kategori/Kopya/"/>
+    
+    
+      <category term="verimlilik" scheme="http://yoursite.com/tags/verimlilik/"/>
+    
+      <category term="editör" scheme="http://yoursite.com/tags/editor/"/>
+    
+      <category term="kopya" scheme="http://yoursite.com/tags/kopya/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Gulp Pluginler</title>
+    <link href="http://yoursite.com/gulp-pluginler/"/>
+    <id>http://yoursite.com/gulp-pluginler/</id>
+    <published>2016-10-05T15:37:39.000Z</published>
+    <updated>2016-11-06T14:40:14.042Z</updated>
+    
+    <content type="html"><![CDATA[<p>Bir takım Gulp pluginleri, hafif kategorize</p>
+<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><ul>
+<li><a href="https://github.com/dlmanning/gulp-sass" target="_blank" rel="external"><code>gulp-sass</code></a>: Sass → CSS with libsass.</li>
+<li><a href="https://github.com/scniro/gulp-clean-css" target="_blank" rel="external"><code>gulp-clean-css</code></a> : Minify CSS with clean-css.</li>
+<li><a href="https://github.com/ben-eb/gulp-uncss" target="_blank" rel="external"><code>gulp-uncss</code></a> : Remove unused CSS selectors with UnCSS.</li>
+<li><a href="https://www.npmjs.com/package/gulp-csslint" target="_blank" rel="external"><code>gulp-csslint</code></a> : Automated linting of CSS with CSSLint.</li>
+<li><a href="https://github.com/postcss/autoprefixer" target="_blank" rel="external"><code>autoprefixer</code></a> - Parse CSS and add vendor prefixes to rules by Can I Use.</li>
+</ul>
+<a id="more"></a>
+<h2 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h2><ul>
+<li><a href="https://github.com/terinjokes/gulp-uglify" target="_blank" rel="external"><code>gulp-uglify</code></a> : Minify JavaScript with UglifyJS2.</li>
+<li><a href="https://github.com/babel/gulp-babel" target="_blank" rel="external"><code>gulp-babel</code></a> : ES6 → ES5 with babel.</li>
+<li><a href="https://github.com/spalger/gulp-jshint" target="_blank" rel="external"><code>gulp-jshint</code></a> : Detect errors and potential problems in JavaScript with JSHint.</li>
+</ul>
+<h2 id="HTML-ve-HTML-Templating"><a href="#HTML-ve-HTML-Templating" class="headerlink" title="HTML ve HTML Templating"></a>HTML ve HTML Templating</h2><ul>
+<li><a href="https://github.com/murphydanger/gulp-minify-html" target="_blank" rel="external"><code>gulp-minify-html</code></a> - Minify HTML with Minimize.</li>
+<li><a href="https://github.com/phated/gulp-jade" target="_blank" rel="external"><code>gulp-jade</code></a> : Jade → HTML.</li>
+<li><a href="https://github.com/zalando/gulp-check-unused-css" target="_blank" rel="external"><code>gulp-check-unused-css</code></a> : Check your HTML templates for unused CSS classes.</li>
+<li><a href="https://github.com/sindresorhus/gulp-markdown" target="_blank" rel="external"><code>gulp-markdown</code></a> : Markdown → HTML.</li>
+<li><a href="https://github.com/bezoerb/gulp-htmlhint" target="_blank" rel="external"><code>gulp-htmlhint</code></a> : HTMLHint wrapper to validate your HTML.</li>
+</ul>
+<h2 id="Optimizasyon"><a href="#Optimizasyon" class="headerlink" title="Optimizasyon"></a>Optimizasyon</h2><ul>
+<li><a href="https://github.com/sindresorhus/gulp-imagemin" target="_blank" rel="external"><code>gulp-imagemin</code></a> : Minify PNG, JPEG, GIF and SVG images with imagemin.</li>
+<li><a href="https://github.com/zckrs/gulp-css-base64" target="_blank" rel="external"><code>gulp-css-base64</code></a> : Transform all resources found (those within a url() declaration) in CSS files into base64-encoded data URI strings.</li>
+<li><a href="https://github.com/mahnunchik/gulp-responsive" target="_blank" rel="external"><code>gulp-responsive</code></a> : Generate images at different sizes.</li>
+</ul>
+<h2 id="Ozel-Degil-Genel-Genel"><a href="#Ozel-Degil-Genel-Genel" class="headerlink" title="Özel Değil; Genel Genel"></a>Özel Değil; Genel Genel</h2><ul>
+<li><a href="https://github.com/robrich/gulp-if" target="_blank" rel="external"><code>gulp-if</code></a> : Conditionally run a task.</li>
+<li><a href="https://github.com/contra/gulp-concat" target="_blank" rel="external"><code>gulp-concat</code></a> : Concatenate files.</li>
+<li><a href="https://github.com/hparra/gulp-rename" target="_blank" rel="external"><code>gulp-rename</code></a> - Rename files easily.</li>
+<li><a href="https://github.com/sindresorhus/del" target="_blank" rel="external"><code>del</code></a> - Delete files/folders using globs.</li>
+<li><a href="https://github.com/floridoo/gulp-sourcemaps" target="_blank" rel="external"><code>gulp-sourcemaps</code></a> - Provide source map support.</li>
+<li><a href="https://github.com/robrich/gulp-exec" target="_blank" rel="external"><code>gulp-exec</code></a> - Run a shell command.</li>
+<li><a href="https://github.com/gulpjs/gulp-util" target="_blank" rel="external"><code>gulp-util</code></a> : Set of useful utilities.</li>
+<li><a href="https://github.com/floatdrop/gulp-plumber" target="_blank" rel="external"><code>gulp-plumber</code></a> : Prevent pipe breaking caused by errors.</li>
+</ul>
+<h2 id="Muhtelif"><a href="#Muhtelif" class="headerlink" title="Muhtelif"></a>Muhtelif</h2><ul>
+<li><a href="https://github.com/BrowserSync/browser-sync" target="_blank" rel="external"><code>browser-sync</code></a> : Keep multiple browsers &amp; devices in sync when building websites (recipes).</li>
+<li><a href="https://github.com/shama/webpack-stream" target="_blank" rel="external"><code>webpack-stream</code></a>: Run webpack as a stream to conveniently integrate with gulp.</li>
+</ul>
+<p>Daha fazlası için <a href="https://github.com/alferov/awesome-gulp#plugins" target="_blank" rel="external">Awesome Gulp</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Bir takım Gulp pluginleri, hafif kategorize&lt;/p&gt;
+&lt;h2 id=&quot;CSS&quot;&gt;&lt;a href=&quot;#CSS&quot; class=&quot;headerlink&quot; title=&quot;CSS&quot;&gt;&lt;/a&gt;CSS&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dlmanning/gulp-sass&quot;&gt;&lt;code&gt;gulp-sass&lt;/code&gt;&lt;/a&gt;: Sass → CSS with libsass.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/scniro/gulp-clean-css&quot;&gt;&lt;code&gt;gulp-clean-css&lt;/code&gt;&lt;/a&gt; : Minify CSS with clean-css.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ben-eb/gulp-uncss&quot;&gt;&lt;code&gt;gulp-uncss&lt;/code&gt;&lt;/a&gt; : Remove unused CSS selectors with UnCSS.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/gulp-csslint&quot;&gt;&lt;code&gt;gulp-csslint&lt;/code&gt;&lt;/a&gt; : Automated linting of CSS with CSSLint.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/postcss/autoprefixer&quot;&gt;&lt;code&gt;autoprefixer&lt;/code&gt;&lt;/a&gt; - Parse CSS and add vendor prefixes to rules by Can I Use.&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Kopya" scheme="http://yoursite.com/kategori/Kopya/"/>
+    
+    
+      <category term="gulp" scheme="http://yoursite.com/tags/gulp/"/>
+    
+      <category term="front-end" scheme="http://yoursite.com/tags/front-end/"/>
+    
+      <category term="javascript tooling" scheme="http://yoursite.com/tags/javascript-tooling/"/>
+    
+      <category term="verimlilik" scheme="http://yoursite.com/tags/verimlilik/"/>
     
   </entry>
   
