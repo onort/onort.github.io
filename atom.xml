@@ -4,9 +4,9 @@
   <subtitle>Kaotik Halde Tarifler, Kopyalar</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
-  <updated>2016-11-05T20:51:11.241Z</updated>
-  <id>http://yoursite.com/</id>
+  <link href="https://onort.github.io/"/>
+  <updated>2016-11-08T19:16:33.104Z</updated>
+  <id>https://onort.github.io/</id>
   
   <author>
     <name>Onort</name>
@@ -16,9 +16,71 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Node Paketler</title>
+    <link href="https://onort.github.io/node-paketler/"/>
+    <id>https://onort.github.io/node-paketler/</id>
+    <published>2016-11-08T18:45:56.000Z</published>
+    <updated>2016-11-08T19:16:33.104Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Database"><a href="#Database" class="headerlink" title="Database"></a>Database</h2><ul>
+<li><a href="https://www.npmjs.com/package/knex" target="_blank" rel="external">knex</a>: A batteries-included SQL query &amp; schema builder for Postgres, MySQL and SQLite3 and the Browser</li>
+<li><a href="https://www.npmjs.com/package/pg" target="_blank" rel="external">pg</a>: PostgreSQL client - pure javascript &amp; libpq with the same API</li>
+<li><a href="https://www.npmjs.com/package/bookshelf" target="_blank" rel="external">bookshelf</a>: A lightweight ORM for PostgreSQL, MySQL, and SQLite3</li>
+</ul>
+<h2 id="Guvenlik"><a href="#Guvenlik" class="headerlink" title="Güvenlik"></a>Güvenlik</h2><ul>
+<li><a href="https://www.npmjs.com/package/bcrypt" target="_blank" rel="external">bcrypt</a>: A bcrypt library for NodeJS.</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Database&quot;&gt;&lt;a href=&quot;#Database&quot; class=&quot;headerlink&quot; title=&quot;Database&quot;&gt;&lt;/a&gt;Database&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/k
+    
+    </summary>
+    
+      <category term="Node.js" scheme="https://onort.github.io/kategori/Node-js/"/>
+    
+    
+      <category term="node" scheme="https://onort.github.io/tags/node/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Bazı ES6 Özellikleri</title>
+    <link href="https://onort.github.io/javascript-es6-node/"/>
+    <id>https://onort.github.io/javascript-es6-node/</id>
+    <published>2016-11-08T13:05:19.000Z</published>
+    <updated>2016-11-08T13:14:46.742Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://nodesource.com/blog/six-of-the-most-exciting-es6-features-in-node-js-v6-lts?utm_source=nodeweekly&amp;utm_medium=email" target="_blank" rel="external">Exiting ES6 features for NodeJS</a></p>
+<h2 id="Setting-defaults-for-function-parameters"><a href="#Setting-defaults-for-function-parameters" class="headerlink" title="Setting defaults for function parameters"></a>Setting defaults for function parameters</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">toThePower</span>(<span class="params">value, exponent = <span class="number">2</span></span>) </span>&#123;</div><div class="line">  <span class="comment">// The rest of your code</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">toThePower(<span class="number">1</span>, <span class="literal">undefined</span>) <span class="comment">// exponent defaults to 2</span></div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="Extracting-Data-from-Arrays-and-Objects-with-Destructuring"><a href="#Extracting-Data-from-Arrays-and-Objects-with-Destructuring" class="headerlink" title="Extracting Data from Arrays and Objects with Destructuring"></a>Extracting Data from Arrays and Objects with Destructuring</h2><p>TODO</p>
+<h2 id="Checking-Array-Values-with-Array-includes"><a href="#Checking-Array-Values-with-Array-includes" class="headerlink" title="Checking Array Values with Array#includes()"></a>Checking Array Values with Array#includes()</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[<span class="number">1</span>, <span class="number">2</span>].includes(<span class="number">1</span>) <span class="comment">// returns true</span></div><div class="line"></div><div class="line">[<span class="number">1</span>, <span class="number">2</span>].includes(<span class="number">4</span>) <span class="comment">// returns false</span></div></pre></td></tr></table></figure>
+<h2 id="Allowing-Extra-Arguments-in-Functions"><a href="#Allowing-Extra-Arguments-in-Functions" class="headerlink" title="Allowing Extra Arguments in Functions"></a>Allowing Extra Arguments in Functions</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">concat</span>(<span class="params">joiner, ...args</span>) </span>&#123;</div><div class="line"></div><div class="line">  <span class="comment">// args is an actual Array</span></div><div class="line"></div><div class="line">  <span class="keyword">return</span> args.join(joiner)</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">concat(‘_’, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>) <span class="comment">// returns ‘1_2_3’</span></div></pre></td></tr></table></figure>
+<h2 id="Expanding-Arrays-with-the-Spread-Operator"><a href="#Expanding-Arrays-with-the-Spread-Operator" class="headerlink" title="Expanding Arrays with the Spread Operator"></a>Expanding Arrays with the Spread Operator</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>]</div><div class="line"></div><div class="line"><span class="keyword">const</span> arr2 = [...arr1, <span class="number">3</span>, <span class="number">4</span>]</div><div class="line"><span class="comment">// arr2: [1, 2, 3, 4]</span></div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://nodesource.com/blog/six-of-the-most-exciting-es6-features-in-node-js-v6-lts?utm_source=nodeweekly&amp;amp;utm_medium=email&quot;&gt;Exiting ES6 features for NodeJS&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Setting-defaults-for-function-parameters&quot;&gt;&lt;a href=&quot;#Setting-defaults-for-function-parameters&quot; class=&quot;headerlink&quot; title=&quot;Setting defaults for function parameters&quot;&gt;&lt;/a&gt;Setting defaults for function parameters&lt;/h2&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;toThePower&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;value, exponent = &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;// The rest of your code&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;toThePower(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;literal&quot;&gt;undefined&lt;/span&gt;) &lt;span class=&quot;comment&quot;&gt;// exponent defaults to 2&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Javascript" scheme="https://onort.github.io/kategori/Javascript/"/>
+    
+    
+      <category term="vanilla javascript" scheme="https://onort.github.io/tags/vanilla-javascript/"/>
+    
+      <category term="es6" scheme="https://onort.github.io/tags/es6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Javascript Higher Order Fonksiyonlar</title>
-    <link href="http://yoursite.com/javascript-higher-order-function/"/>
-    <id>http://yoursite.com/javascript-higher-order-function/</id>
+    <link href="https://onort.github.io/javascript-higher-order-function/"/>
+    <id>https://onort.github.io/javascript-higher-order-function/</id>
     <published>2016-11-05T20:36:52.000Z</published>
     <updated>2016-11-05T20:51:11.241Z</updated>
     
@@ -36,17 +98,17 @@
     
     </summary>
     
-      <category term="Javascript" scheme="http://yoursite.com/kategori/Javascript/"/>
+      <category term="Javascript" scheme="https://onort.github.io/kategori/Javascript/"/>
     
     
-      <category term="vanilla javascript" scheme="http://yoursite.com/tags/vanilla-javascript/"/>
+      <category term="vanilla javascript" scheme="https://onort.github.io/tags/vanilla-javascript/"/>
     
   </entry>
   
   <entry>
     <title>React Higher Order Component Olayı</title>
-    <link href="http://yoursite.com/react-higher-order-component/"/>
-    <id>http://yoursite.com/react-higher-order-component/</id>
+    <link href="https://onort.github.io/react-higher-order-component/"/>
+    <id>https://onort.github.io/react-higher-order-component/</id>
     <published>2016-11-05T20:36:14.000Z</published>
     <updated>2016-11-05T20:52:22.073Z</updated>
     
@@ -65,89 +127,62 @@
     
     </summary>
     
-      <category term="React" scheme="http://yoursite.com/kategori/React/"/>
+      <category term="React" scheme="https://onort.github.io/kategori/React/"/>
     
     
-      <category term="front-end" scheme="http://yoursite.com/tags/front-end/"/>
+      <category term="front-end" scheme="https://onort.github.io/tags/front-end/"/>
     
-      <category term="react" scheme="http://yoursite.com/tags/react/"/>
+      <category term="react" scheme="https://onort.github.io/tags/react/"/>
     
   </entry>
   
   <entry>
     <title>Node.js Postgres Bağlantı</title>
-    <link href="http://yoursite.com/nodejs-postgres-baglanti/"/>
-    <id>http://yoursite.com/nodejs-postgres-baglanti/</id>
+    <link href="https://onort.github.io/nodejs-postgres-baglanti/"/>
+    <id>https://onort.github.io/nodejs-postgres-baglanti/</id>
     <published>2016-11-05T20:35:43.000Z</published>
-    <updated>2016-11-05T20:51:47.661Z</updated>
+    <updated>2016-11-08T19:39:32.913Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul>
-<li>Needed npm packages</li>
-<li>Example conenction</li>
-<li>Example query, select</li>
-<li>Links</li>
-</ul>
+    <content type="html"><![CDATA[<h2 id="Database-Olustur"><a href="#Database-Olustur" class="headerlink" title="Database Oluştur"></a>Database Oluştur</h2><p>İlk olarak bir database ve kullanıcı oluştur.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">sudo -u postgres -i</div><div class="line">createdb database_ismi</div><div class="line">psql database_ismi</div><div class="line">CREATE USER user-name WITH PASSWORD &quot;user-password&quot;</div><div class="line">GRANT ALL PRIVILEGES ON DATABASE &quot;database_ismi&quot; to username</div></pre></td></tr></table></figure>
+<h2 id="Knex"><a href="#Knex" class="headerlink" title="Knex"></a>Knex</h2><p>Data senkronizasyonu ve migrasyonu için <a href="https://www.npmjs.com/package/knex" target="_blank" rel="external"><code>knex</code></a> adlı paketten yararlanabilirsin. Proje rootta <code>knex init</code> ile knexfile.js oluştur. Konfiguasyon bilgilerini <code>knexfile.js</code>‘e gir.</p>
+<a id="more"></a>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ./knexfile.js</span></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line"></div><div class="line">  <span class="attr">development</span>: &#123;</div><div class="line">    <span class="attr">client</span>: <span class="string">'postgresql'</span>,</div><div class="line">    <span class="attr">connection</span>: &#123;</div><div class="line">      <span class="attr">database</span>: <span class="string">'database_ismi'</span>,</div><div class="line">      <span class="attr">user</span>:     <span class="string">'database_kullanici'</span>,</div><div class="line">      <span class="attr">password</span>: <span class="string">'db_sifre'</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">pool</span>: &#123;</div><div class="line">      <span class="attr">min</span>: <span class="number">2</span>,</div><div class="line">      <span class="attr">max</span>: <span class="number">10</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">migrations</span>: &#123;</div><div class="line">      <span class="attr">tableName</span>: <span class="string">'knex_migrations'</span></div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line"><span class="comment">// ...</span></div></pre></td></tr></table></figure>
+<h2 id="PostgreSQL-Client"><a href="#PostgreSQL-Client" class="headerlink" title="PostgreSQL Client"></a>PostgreSQL Client</h2><p>Node için postgres client’ını yükle.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save pg</div></pre></td></tr></table></figure>
+<p>Tablo için migration dosyası oluştur.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">knex migrate:make tablo_ismi</div></pre></td></tr></table></figure>
+<h2 id="Tablo-Olustur"><a href="#Tablo-Olustur" class="headerlink" title="Tablo Oluştur"></a>Tablo Oluştur</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ./migrations/20161010xxxxxx_tablo-ismi.js</span></div><div class="line"></div><div class="line"><span class="comment">// tablo oluştur</span></div><div class="line">exports.up = <span class="function"><span class="keyword">function</span>(<span class="params">knex, Promise</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> knex.schema.createTable(<span class="string">'tablo_ismi'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">table</span>) </span>&#123;</div><div class="line">    table.increments(); <span class="comment">// increment ederek id oluştur.</span></div><div class="line">    table.string(<span class="string">'username'</span>).notNullable().unique();</div><div class="line">    table.string(<span class="string">'email'</span>).notNullable().unique();</div><div class="line">    table.string(<span class="string">'timezone'</span>).notNullable();</div><div class="line">    table.string(<span class="string">'password_digest'</span>).notNullable();</div><div class="line">    table.timestamps(); <span class="comment">// createAt ve updatedAt oluştur.</span></div><div class="line">  &#125;);</div><div class="line">&#125;;</div><div class="line"></div><div class="line">exports.down = <span class="function"><span class="keyword">function</span>(<span class="params">knex, Promise</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> knex.schema.dropTable(<span class="string">'tablo_ismi'</span>);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p><code>knex migrate:latest</code> ile tabloyu migrate et.</p>
+<h2 id="ORM"><a href="#ORM" class="headerlink" title="ORM"></a>ORM</h2><p><a href="https://www.npmjs.com/package/bookshelf" target="_blank" rel="external"><code>bookshelf</code></a> paketini ORM olark kullanabilirsin, knex ile çalışıyor. Bookshelf instance’ı oluştur.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// server/bookshelf.js</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> knex <span class="keyword">from</span> <span class="string">'knex'</span>;</div><div class="line"><span class="keyword">import</span> bookshelf <span class="keyword">from</span> <span class="string">'bookshelf'</span>;</div><div class="line"></div><div class="line"><span class="keyword">import</span> knexConfig <span class="keyword">from</span> <span class="string">'../knexfile'</span>;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> bookshelf(knex(knexConfig.development));</div></pre></td></tr></table></figure>
+<h2 id="Ornek"><a href="#Ornek" class="headerlink" title="Örnek"></a>Örnek</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// server/models/user.js</span></div><div class="line"><span class="keyword">import</span> bookshelf <span class="keyword">from</span> <span class="string">'../bookshelf'</span>; <span class="comment">// Our initialized instance of bookshelf</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> bookshelf.Model.extend(&#123;</div><div class="line">  <span class="attr">tableName</span>: <span class="string">'users'</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// server/routes/users.js</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> express <span class="keyword">from</span> <span class="string">'express'</span>;</div><div class="line"><span class="keyword">import</span> commonValidations <span class="keyword">from</span> <span class="string">'../shared/validations/signup'</span>;</div><div class="line"><span class="keyword">import</span> bcrypt <span class="keyword">from</span> <span class="string">'bcrypt'</span>;</div><div class="line"><span class="keyword">import</span> isEmpty <span class="keyword">from</span> <span class="string">'lodash/isEmpty'</span>;</div><div class="line"></div><div class="line"><span class="keyword">import</span> User <span class="keyword">from</span> <span class="string">'../models/user'</span>;</div><div class="line"></div><div class="line"><span class="keyword">let</span> router = express.Router();</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">validateInput</span>(<span class="params">data, otherValidations</span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> &#123; errors &#125; = otherValidations(data);</div><div class="line">  <span class="comment">// uniqueness check promise</span></div><div class="line">  <span class="keyword">return</span> User.query(&#123;</div><div class="line">    <span class="attr">where</span>: &#123; <span class="attr">email</span>: data.email &#125;,</div><div class="line">    <span class="attr">orWhere</span>: &#123; <span class="attr">username</span>: data.username &#125;</div><div class="line">  &#125;).fetch().then(<span class="function"><span class="params">user</span> =&gt;</span> &#123;</div><div class="line">    <span class="keyword">if</span> (user) &#123;</div><div class="line">      <span class="keyword">if</span> (user.get(<span class="string">'username'</span>) === data.username) &#123;</div><div class="line">        errors.username = <span class="string">'There is user with such username'</span>;</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">if</span> (user.get(<span class="string">'email'</span>) === data.email) &#123;</div><div class="line">        errors.email = <span class="string">'There is user with such email'</span>;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        errors,</div><div class="line">        <span class="attr">isValid</span>: isEmpty(errors)</div><div class="line">    &#125;;</div><div class="line">  &#125;)</div><div class="line">&#125;</div><div class="line"><span class="comment">// /users route</span></div><div class="line">router.post(<span class="string">'/'</span>, (req, res) =&gt; &#123;</div><div class="line">  validateInput(req.body, commonValidations).then(<span class="function">(<span class="params">&#123; errors, isValid &#125;</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">if</span> (isValid) &#123;</div><div class="line">      <span class="keyword">const</span> &#123; username, password, timezone, email &#125; = req.body;</div><div class="line">      <span class="keyword">const</span> password_digest = bcrypt.hashSync(password, <span class="number">10</span>);</div><div class="line">      User.forge(&#123;</div><div class="line">          username, timezone, email, password_digest</div><div class="line">        &#125;, &#123;</div><div class="line">          <span class="attr">hasTimestamps</span>: <span class="literal">true</span> &#125; <span class="comment">//options</span></div><div class="line">      ).save() <span class="comment">//returns a promise</span></div><div class="line">        .then(<span class="function"><span class="params">user</span> =&gt;</span> res.json(&#123; <span class="attr">success</span>: <span class="literal">true</span> &#125;))</div><div class="line">        .catch(<span class="function"><span class="params">err</span> =&gt;</span> res.status(<span class="number">500</span>).json(&#123; <span class="attr">error</span>: err &#125;));</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      res.status(<span class="number">400</span>).json(errors);</div><div class="line">    &#125;</div><div class="line">  &#125;)</div><div class="line">&#125;);</div><div class="line"></div><div class="line">router.get(<span class="string">'/:identifier'</span>, (req, res) =&gt; &#123;</div><div class="line">  User.query(&#123;</div><div class="line">    <span class="attr">select</span>: [<span class="string">'username'</span>, <span class="string">'email'</span>],</div><div class="line">    <span class="attr">where</span>: &#123; <span class="attr">email</span>: req.params.identifier &#125;,</div><div class="line">    <span class="attr">orWhere</span>: &#123; <span class="attr">username</span>: req.params.identifier &#125;</div><div class="line">  &#125;).fetch().then(<span class="function"><span class="params">user</span> =&gt;</span> &#123;</div><div class="line">    res.json(&#123; user &#125;);</div><div class="line">  &#125;);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> router;</div></pre></td></tr></table></figure>
+<p>Örnek <a href="https://www.youtube.com/playlist?list=PLuNEz8XtB51K-x3bwCC9uNM_cxXaiCcRY" target="_blank" rel="external">Rem Zolotykh</a>‘ın Youtube’da paylaştığı Redux - React tutorial’ından. <a href="https://github.com/Remchi/reddice" target="_blank" rel="external">Repo</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;TODO&quot;&gt;&lt;a href=&quot;#TODO&quot; class=&quot;headerlink&quot; title=&quot;TODO&quot;&gt;&lt;/a&gt;TODO&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Needed npm packages&lt;/li&gt;
-&lt;li&gt;Example conenction&lt;/li&gt;
-&lt;li
+      &lt;h2 id=&quot;Database-Olustur&quot;&gt;&lt;a href=&quot;#Database-Olustur&quot; class=&quot;headerlink&quot; title=&quot;Database Oluştur&quot;&gt;&lt;/a&gt;Database Oluştur&lt;/h2&gt;&lt;p&gt;İlk olarak bir database ve kullanıcı oluştur.&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;sudo -u postgres -i&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;createdb database_ismi&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;psql database_ismi&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;CREATE USER user-name WITH PASSWORD &amp;quot;user-password&amp;quot;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;GRANT ALL PRIVILEGES ON DATABASE &amp;quot;database_ismi&amp;quot; to username&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;Knex&quot;&gt;&lt;a href=&quot;#Knex&quot; class=&quot;headerlink&quot; title=&quot;Knex&quot;&gt;&lt;/a&gt;Knex&lt;/h2&gt;&lt;p&gt;Data senkronizasyonu ve migrasyonu için &lt;a href=&quot;https://www.npmjs.com/package/knex&quot;&gt;&lt;code&gt;knex&lt;/code&gt;&lt;/a&gt; adlı paketten yararlanabilirsin. Proje rootta &lt;code&gt;knex init&lt;/code&gt; ile knexfile.js oluştur. Konfiguasyon bilgilerini &lt;code&gt;knexfile.js&lt;/code&gt;‘e gir.&lt;/p&gt;
     
     </summary>
     
-      <category term="Node.js" scheme="http://yoursite.com/kategori/Node-js/"/>
+      <category term="Node.js" scheme="https://onort.github.io/kategori/Node-js/"/>
     
     
-      <category term="node" scheme="http://yoursite.com/tags/node/"/>
+      <category term="node" scheme="https://onort.github.io/tags/node/"/>
     
-      <category term="database" scheme="http://yoursite.com/tags/database/"/>
+      <category term="postgres" scheme="https://onort.github.io/tags/postgres/"/>
     
-      <category term="postgres" scheme="http://yoursite.com/tags/postgres/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Node.js MySQL Bağlantı</title>
-    <link href="http://yoursite.com/nodejs-mysql-baglanti/"/>
-    <id>http://yoursite.com/nodejs-mysql-baglanti/</id>
-    <published>2016-11-05T20:35:29.000Z</published>
-    <updated>2016-11-05T20:51:29.425Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul>
-<li>Needed npm packages</li>
-<li>Example conenction</li>
-<li>Example query, select</li>
-<li>Links</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;TODO&quot;&gt;&lt;a href=&quot;#TODO&quot; class=&quot;headerlink&quot; title=&quot;TODO&quot;&gt;&lt;/a&gt;TODO&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Needed npm packages&lt;/li&gt;
-&lt;li&gt;Example conenction&lt;/li&gt;
-&lt;li
-    
-    </summary>
-    
-      <category term="Node.js" scheme="http://yoursite.com/kategori/Node-js/"/>
-    
-    
-      <category term="node" scheme="http://yoursite.com/tags/node/"/>
-    
-      <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
-    
-      <category term="database" scheme="http://yoursite.com/tags/database/"/>
+      <category term="database" scheme="https://onort.github.io/tags/database/"/>
     
   </entry>
   
   <entry>
     <title>VS Code Kısayollar</title>
-    <link href="http://yoursite.com/vs-code-kisayollar/"/>
-    <id>http://yoursite.com/vs-code-kisayollar/</id>
+    <link href="https://onort.github.io/vs-code-kisayollar/"/>
+    <id>https://onort.github.io/vs-code-kisayollar/</id>
     <published>2016-10-20T20:37:15.000Z</published>
     <updated>2016-11-06T13:36:27.884Z</updated>
     
@@ -326,63 +361,63 @@
     
     </summary>
     
-      <category term="Kopya" scheme="http://yoursite.com/kategori/Kopya/"/>
+      <category term="Kopya" scheme="https://onort.github.io/kategori/Kopya/"/>
     
     
-      <category term="verimlilik" scheme="http://yoursite.com/tags/verimlilik/"/>
+      <category term="verimlilik" scheme="https://onort.github.io/tags/verimlilik/"/>
     
-      <category term="editör" scheme="http://yoursite.com/tags/editor/"/>
+      <category term="editör" scheme="https://onort.github.io/tags/editor/"/>
     
-      <category term="kopya" scheme="http://yoursite.com/tags/kopya/"/>
+      <category term="kopya" scheme="https://onort.github.io/tags/kopya/"/>
     
   </entry>
   
   <entry>
     <title>Gulp Pluginler</title>
-    <link href="http://yoursite.com/gulp-pluginler/"/>
-    <id>http://yoursite.com/gulp-pluginler/</id>
+    <link href="https://onort.github.io/gulp-pluginler/"/>
+    <id>https://onort.github.io/gulp-pluginler/</id>
     <published>2016-10-05T15:37:39.000Z</published>
-    <updated>2016-11-06T14:40:14.042Z</updated>
+    <updated>2016-11-08T13:13:06.529Z</updated>
     
     <content type="html"><![CDATA[<p>Bir takım Gulp pluginleri, hafif kategorize</p>
 <h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><ul>
-<li><a href="https://github.com/dlmanning/gulp-sass" target="_blank" rel="external"><code>gulp-sass</code></a>: Sass → CSS with libsass.</li>
-<li><a href="https://github.com/scniro/gulp-clean-css" target="_blank" rel="external"><code>gulp-clean-css</code></a> : Minify CSS with clean-css.</li>
-<li><a href="https://github.com/ben-eb/gulp-uncss" target="_blank" rel="external"><code>gulp-uncss</code></a> : Remove unused CSS selectors with UnCSS.</li>
-<li><a href="https://www.npmjs.com/package/gulp-csslint" target="_blank" rel="external"><code>gulp-csslint</code></a> : Automated linting of CSS with CSSLint.</li>
+<li><a href="https://github.com/dlmanning/gulp-sass" target="_blank" rel="external"><code>gulp-sass</code></a>- Sass → CSS with libsass.</li>
+<li><a href="https://github.com/scniro/gulp-clean-css" target="_blank" rel="external"><code>gulp-clean-css</code></a> - Minify CSS with clean-css.</li>
+<li><a href="https://github.com/ben-eb/gulp-uncss" target="_blank" rel="external"><code>gulp-uncss</code></a> - Remove unused CSS selectors with UnCSS.</li>
+<li><a href="https://www.npmjs.com/package/gulp-csslint" target="_blank" rel="external"><code>gulp-csslint</code></a> - Automated linting of CSS with CSSLint.</li>
 <li><a href="https://github.com/postcss/autoprefixer" target="_blank" rel="external"><code>autoprefixer</code></a> - Parse CSS and add vendor prefixes to rules by Can I Use.</li>
 </ul>
 <a id="more"></a>
 <h2 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h2><ul>
-<li><a href="https://github.com/terinjokes/gulp-uglify" target="_blank" rel="external"><code>gulp-uglify</code></a> : Minify JavaScript with UglifyJS2.</li>
-<li><a href="https://github.com/babel/gulp-babel" target="_blank" rel="external"><code>gulp-babel</code></a> : ES6 → ES5 with babel.</li>
-<li><a href="https://github.com/spalger/gulp-jshint" target="_blank" rel="external"><code>gulp-jshint</code></a> : Detect errors and potential problems in JavaScript with JSHint.</li>
+<li><a href="https://github.com/terinjokes/gulp-uglify" target="_blank" rel="external"><code>gulp-uglify</code></a> - Minify JavaScript with UglifyJS2.</li>
+<li><a href="https://github.com/babel/gulp-babel" target="_blank" rel="external"><code>gulp-babel</code></a> - ES6 → ES5 with babel.</li>
+<li><a href="https://github.com/spalger/gulp-jshint" target="_blank" rel="external"><code>gulp-jshint</code></a> - Detect errors and potential problems in JavaScript with JSHint.</li>
 </ul>
 <h2 id="HTML-ve-HTML-Templating"><a href="#HTML-ve-HTML-Templating" class="headerlink" title="HTML ve HTML Templating"></a>HTML ve HTML Templating</h2><ul>
 <li><a href="https://github.com/murphydanger/gulp-minify-html" target="_blank" rel="external"><code>gulp-minify-html</code></a> - Minify HTML with Minimize.</li>
-<li><a href="https://github.com/phated/gulp-jade" target="_blank" rel="external"><code>gulp-jade</code></a> : Jade → HTML.</li>
-<li><a href="https://github.com/zalando/gulp-check-unused-css" target="_blank" rel="external"><code>gulp-check-unused-css</code></a> : Check your HTML templates for unused CSS classes.</li>
-<li><a href="https://github.com/sindresorhus/gulp-markdown" target="_blank" rel="external"><code>gulp-markdown</code></a> : Markdown → HTML.</li>
-<li><a href="https://github.com/bezoerb/gulp-htmlhint" target="_blank" rel="external"><code>gulp-htmlhint</code></a> : HTMLHint wrapper to validate your HTML.</li>
+<li><a href="https://github.com/phated/gulp-jade" target="_blank" rel="external"><code>gulp-jade</code></a> - Jade → HTML.</li>
+<li><a href="https://github.com/zalando/gulp-check-unused-css" target="_blank" rel="external"><code>gulp-check-unused-css</code></a> - Check your HTML templates for unused CSS classes.</li>
+<li><a href="https://github.com/sindresorhus/gulp-markdown" target="_blank" rel="external"><code>gulp-markdown</code></a> - Markdown → HTML.</li>
+<li><a href="https://github.com/bezoerb/gulp-htmlhint" target="_blank" rel="external"><code>gulp-htmlhint</code></a> - HTMLHint wrapper to validate your HTML.</li>
 </ul>
 <h2 id="Optimizasyon"><a href="#Optimizasyon" class="headerlink" title="Optimizasyon"></a>Optimizasyon</h2><ul>
-<li><a href="https://github.com/sindresorhus/gulp-imagemin" target="_blank" rel="external"><code>gulp-imagemin</code></a> : Minify PNG, JPEG, GIF and SVG images with imagemin.</li>
-<li><a href="https://github.com/zckrs/gulp-css-base64" target="_blank" rel="external"><code>gulp-css-base64</code></a> : Transform all resources found (those within a url() declaration) in CSS files into base64-encoded data URI strings.</li>
-<li><a href="https://github.com/mahnunchik/gulp-responsive" target="_blank" rel="external"><code>gulp-responsive</code></a> : Generate images at different sizes.</li>
+<li><a href="https://github.com/sindresorhus/gulp-imagemin" target="_blank" rel="external"><code>gulp-imagemin</code></a> - Minify PNG, JPEG, GIF and SVG images with imagemin.</li>
+<li><a href="https://github.com/zckrs/gulp-css-base64" target="_blank" rel="external"><code>gulp-css-base64</code></a> - Transform all resources found (those within a url() declaration) in CSS files into base64-encoded data URI strings.</li>
+<li><a href="https://github.com/mahnunchik/gulp-responsive" target="_blank" rel="external"><code>gulp-responsive</code></a> - Generate images at different sizes.</li>
 </ul>
 <h2 id="Ozel-Degil-Genel-Genel"><a href="#Ozel-Degil-Genel-Genel" class="headerlink" title="Özel Değil; Genel Genel"></a>Özel Değil; Genel Genel</h2><ul>
-<li><a href="https://github.com/robrich/gulp-if" target="_blank" rel="external"><code>gulp-if</code></a> : Conditionally run a task.</li>
-<li><a href="https://github.com/contra/gulp-concat" target="_blank" rel="external"><code>gulp-concat</code></a> : Concatenate files.</li>
+<li><a href="https://github.com/robrich/gulp-if" target="_blank" rel="external"><code>gulp-if</code></a> - Conditionally run a task.</li>
+<li><a href="https://github.com/contra/gulp-concat" target="_blank" rel="external"><code>gulp-concat</code></a> - Concatenate files.</li>
 <li><a href="https://github.com/hparra/gulp-rename" target="_blank" rel="external"><code>gulp-rename</code></a> - Rename files easily.</li>
 <li><a href="https://github.com/sindresorhus/del" target="_blank" rel="external"><code>del</code></a> - Delete files/folders using globs.</li>
 <li><a href="https://github.com/floridoo/gulp-sourcemaps" target="_blank" rel="external"><code>gulp-sourcemaps</code></a> - Provide source map support.</li>
 <li><a href="https://github.com/robrich/gulp-exec" target="_blank" rel="external"><code>gulp-exec</code></a> - Run a shell command.</li>
-<li><a href="https://github.com/gulpjs/gulp-util" target="_blank" rel="external"><code>gulp-util</code></a> : Set of useful utilities.</li>
-<li><a href="https://github.com/floatdrop/gulp-plumber" target="_blank" rel="external"><code>gulp-plumber</code></a> : Prevent pipe breaking caused by errors.</li>
+<li><a href="https://github.com/gulpjs/gulp-util" target="_blank" rel="external"><code>gulp-util</code></a> - Set of useful utilities.</li>
+<li><a href="https://github.com/floatdrop/gulp-plumber" target="_blank" rel="external"><code>gulp-plumber</code></a> - Prevent pipe breaking caused by errors.</li>
 </ul>
 <h2 id="Muhtelif"><a href="#Muhtelif" class="headerlink" title="Muhtelif"></a>Muhtelif</h2><ul>
-<li><a href="https://github.com/BrowserSync/browser-sync" target="_blank" rel="external"><code>browser-sync</code></a> : Keep multiple browsers &amp; devices in sync when building websites (recipes).</li>
-<li><a href="https://github.com/shama/webpack-stream" target="_blank" rel="external"><code>webpack-stream</code></a>: Run webpack as a stream to conveniently integrate with gulp.</li>
+<li><a href="https://github.com/BrowserSync/browser-sync" target="_blank" rel="external"><code>browser-sync</code></a> - Keep multiple browsers &amp; devices in sync when building websites (recipes).</li>
+<li><a href="https://github.com/shama/webpack-stream" target="_blank" rel="external"><code>webpack-stream</code></a> - Run webpack as a stream to conveniently integrate with gulp.</li>
 </ul>
 <p>Daha fazlası için <a href="https://github.com/alferov/awesome-gulp#plugins" target="_blank" rel="external">Awesome Gulp</a></p>
 ]]></content>
@@ -391,25 +426,152 @@
     
       &lt;p&gt;Bir takım Gulp pluginleri, hafif kategorize&lt;/p&gt;
 &lt;h2 id=&quot;CSS&quot;&gt;&lt;a href=&quot;#CSS&quot; class=&quot;headerlink&quot; title=&quot;CSS&quot;&gt;&lt;/a&gt;CSS&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/dlmanning/gulp-sass&quot;&gt;&lt;code&gt;gulp-sass&lt;/code&gt;&lt;/a&gt;: Sass → CSS with libsass.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/scniro/gulp-clean-css&quot;&gt;&lt;code&gt;gulp-clean-css&lt;/code&gt;&lt;/a&gt; : Minify CSS with clean-css.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/ben-eb/gulp-uncss&quot;&gt;&lt;code&gt;gulp-uncss&lt;/code&gt;&lt;/a&gt; : Remove unused CSS selectors with UnCSS.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/gulp-csslint&quot;&gt;&lt;code&gt;gulp-csslint&lt;/code&gt;&lt;/a&gt; : Automated linting of CSS with CSSLint.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dlmanning/gulp-sass&quot;&gt;&lt;code&gt;gulp-sass&lt;/code&gt;&lt;/a&gt;- Sass → CSS with libsass.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/scniro/gulp-clean-css&quot;&gt;&lt;code&gt;gulp-clean-css&lt;/code&gt;&lt;/a&gt; - Minify CSS with clean-css.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ben-eb/gulp-uncss&quot;&gt;&lt;code&gt;gulp-uncss&lt;/code&gt;&lt;/a&gt; - Remove unused CSS selectors with UnCSS.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/gulp-csslint&quot;&gt;&lt;code&gt;gulp-csslint&lt;/code&gt;&lt;/a&gt; - Automated linting of CSS with CSSLint.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/postcss/autoprefixer&quot;&gt;&lt;code&gt;autoprefixer&lt;/code&gt;&lt;/a&gt; - Parse CSS and add vendor prefixes to rules by Can I Use.&lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>
     
-      <category term="Kopya" scheme="http://yoursite.com/kategori/Kopya/"/>
+      <category term="Kopya" scheme="https://onort.github.io/kategori/Kopya/"/>
     
     
-      <category term="gulp" scheme="http://yoursite.com/tags/gulp/"/>
+      <category term="gulp" scheme="https://onort.github.io/tags/gulp/"/>
     
-      <category term="front-end" scheme="http://yoursite.com/tags/front-end/"/>
+      <category term="front-end" scheme="https://onort.github.io/tags/front-end/"/>
     
-      <category term="javascript tooling" scheme="http://yoursite.com/tags/javascript-tooling/"/>
+      <category term="javascript tooling" scheme="https://onort.github.io/tags/javascript-tooling/"/>
     
-      <category term="verimlilik" scheme="http://yoursite.com/tags/verimlilik/"/>
+      <category term="verimlilik" scheme="https://onort.github.io/tags/verimlilik/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown Nasıl?</title>
+    <link href="https://onort.github.io/markdown-nasil/"/>
+    <id>https://onort.github.io/markdown-nasil/</id>
+    <published>2016-09-08T14:47:41.000Z</published>
+    <updated>2016-11-08T15:37:17.089Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Basliklar"><a href="#Basliklar" class="headerlink" title="Başlıklar"></a>Başlıklar</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="section"># h1</span></div><div class="line">...</div><div class="line">...</div><div class="line"><span class="section">###### h6</span></div></pre></td></tr></table></figure>
+<h2 id="Font-Stilleri"><a href="#Font-Stilleri" class="headerlink" title="Font Stilleri"></a>Font Stilleri</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="emphasis">*italik*</span></div><div class="line"><span class="strong">**bold**</span></div><div class="line"><span class="strong">**bold ve _italik_*</span>*</div><div class="line">~~strikethrough~~</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p><em>italik</em><br><strong>bold</strong><br><strong>bold ve <em>italik</em></strong><br><del>strikethrough</del></p>
+<h2 id="Listeler"><a href="#Listeler" class="headerlink" title="Listeler"></a>Listeler</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">1. </span>Sıralı Liste</div><div class="line"><span class="bullet">1. </span>Sıra numarası önemsiz</div><div class="line"></div><div class="line"><span class="bullet">* </span>Sırasız Liste</div><div class="line"><span class="bullet">- </span><span class="code">`-`</span> veya <span class="code">`+`</span> da kullanılabilir</div><div class="line"></div><div class="line"><span class="bullet">1. </span>Nested listeler</div><div class="line">  * Indent ile mümkün</div><div class="line"><span class="code">    1. Sıralı veya</span></div><div class="line"><span class="code">    2. Sırasız</span></div><div class="line"></div><div class="line"><span class="code">    Liste içi paragraf için tek satır ara ve indent yeterli.</span></div><div class="line"></div><div class="line"><span class="code">    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></div></pre></td></tr></table></figure>
+<ol>
+<li>Sıralı Liste</li>
+<li>Sıra numarası önemsiz</li>
+</ol>
+<ul>
+<li>Sırasız Liste</li>
+</ul>
+<ul>
+<li><code>-</code> veya <code>+</code> da kullanılabilir</li>
+</ul>
+<ol>
+<li><p>Nested listeler</p>
+<ul>
+<li><p>Indent ile mümkün</p>
+<ol>
+<li>Sıralı veya</li>
+<li><p>Sırasız</p>
+<p>Liste içi paragraf için tek satır boşluk ve indent yeterli.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="Linkler"><a href="#Linkler" class="headerlink" title="Linkler"></a>Linkler</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">[<span class="string">Inline link</span>](<span class="link">https://www.google.com</span>)</div><div class="line"></div><div class="line">[<span class="string">Title'lı inine link</span>](<span class="link">https://www.google.com "Google"</span>)</div><div class="line"></div><div class="line">[<span class="string">Referans</span>][<span class="symbol">referans metni</span>]</div><div class="line"></div><div class="line">[<span class="string">Refereans 2</span>][<span class="symbol">1</span>]</div><div class="line"></div><div class="line">[<span class="string">relative link</span>](<span class="link">../markdown-nasil/</span>)</div><div class="line"></div><div class="line">Doğrudan link https://www.google.com</div><div class="line"></div><div class="line">[<span class="symbol">referans metni</span>]: <span class="link">https://www.google.com</span></div><div class="line">[<span class="symbol">1</span>]: <span class="link">http://www.google.com</span></div></pre></td></tr></table></figure>
+<p><a href="https://www.google.com" target="_blank" rel="external">Inline link</a></p>
+<p><a href="https://www.google.com" title="Google" target="_blank" rel="external">Title’lı inine link</a></p>
+<p><a href="https://www.google.com" target="_blank" rel="external">Referans</a></p>
+<p><a href="http://www.google.com" target="_blank" rel="external">Refereans 2</a></p>
+<p><a href="../markdown-nasil/">relative link</a></p>
+<p>Doğrudan link <a href="https://www.google.com" target="_blank" rel="external">https://www.google.com</a></p>
+<h2 id="Imge"><a href="#Imge" class="headerlink" title="İmge"></a>İmge</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Inline:</div><div class="line">![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png &quot;Logo Title Text 1&quot;)</div><div class="line"></div><div class="line">Referans:</div><div class="line">![alt text][logo]</div><div class="line"></div><div class="line">[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png &quot;Logo Title Text 2&quot;</div></pre></td></tr></table></figure>
+<p>Inline:<br><img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" alt="alt text" title="Logo Title Text 1"></p>
+<p>Referans:<br><img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" alt="alt text" title="Logo Title Text 2"></p>
+<h2 id="Kod"><a href="#Kod" class="headerlink" title="Kod"></a>Kod</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Inline olarak `console.log(&apos;Selam!&apos;)` şeklinde.</div></pre></td></tr></table></figure>
+<p>Inline olarak <code>console.log(&#39;Selam!&#39;)</code> şeklinde. Ya da blok olarak:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> selam = <span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">'Selam!'</span>);</div></pre></td></tr></table></figure>
+<h2 id="Tablo"><a href="#Tablo" class="headerlink" title="Tablo"></a>Tablo</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">| Tables        | Are           | Cool  |</div><div class="line">| ------------- |:-------------:| -----:|</div><div class="line">| col 3 is      | right-aligned | $1600 |</div><div class="line">| col 2 is      | centered      |   $12 |</div><div class="line">| zebra stripes | are neat      |    $1 |</div><div class="line"></div><div class="line">Markdown | Less | Pretty</div><div class="line">--- | --- | ---</div><div class="line">*Still* | `renders` | **nicely**</div></pre></td></tr></table></figure>
+<p>Tablo başlıkları en az üç adet <code>-</code> ile ayrılmak zorunda, dışta kalan kolonlar için | opsiyonel.</p>
+<table>
+<thead>
+<tr>
+<th>Tables</th>
+<th style="text-align:center">Are</th>
+<th style="text-align:right">Cool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>col 3 is</td>
+<td style="text-align:center">right-aligned</td>
+<td style="text-align:right">$1600</td>
+</tr>
+<tr>
+<td>col 2 is</td>
+<td style="text-align:center">centered</td>
+<td style="text-align:right">$12</td>
+</tr>
+<tr>
+<td>zebra stripes</td>
+<td style="text-align:center">are neat</td>
+<td style="text-align:right">$1</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>Less</th>
+<th>Pretty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Still</em></td>
+<td><code>renders</code></td>
+<td><strong>nicely</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Alinti"><a href="#Alinti" class="headerlink" title="Alıntı"></a>Alıntı</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; Bu şekilde alntı &lt;blockquote&gt;</div><div class="line">&gt; yapabilirsin.</div></pre></td></tr></table></figure>
+<blockquote>
+<p>Bu şekilde alntı<br>yapabilirsin.</p>
+</blockquote>
+<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dl</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">dt</span>&gt;</span>Definition list<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">dd</span>&gt;</span>Is something people use sometimes.<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">dt</span>&gt;</span>Markdown in HTML<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">dd</span>&gt;</span>Does *not* work **very** well. Use HTML <span class="tag">&lt;<span class="name">em</span>&gt;</span>tags<span class="tag">&lt;/<span class="name">em</span>&gt;</span>.<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></div></pre></td></tr></table></figure>
+<dl><br>  <dt>Definition list</dt><br>  <dd>Is something people use sometimes.</dd><br><br>  <dt>Markdown in HTML</dt><br>  <dd>Does <em>not</em> work <strong>very</strong> well. Use HTML <em>tags</em>.</dd><br></dl>
+
+<h2 id="Horizontal-Rule"><a href="#Horizontal-Rule" class="headerlink" title="Horizontal Rule"></a>Horizontal Rule</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">---</div></pre></td></tr></table></figure>
+<hr>
+<p>Daha fazlası için</p>
+<ul>
+<li><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tables" target="_blank" rel="external">markdown-here</a></li>
+<li><a href="https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf" target="_blank" rel="external">github flavored markdown</a></li>
+<li><a href="http://assemble.io/docs/Cheatsheet-Markdown.html" target="_blank" rel="external">assamble</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Basliklar&quot;&gt;&lt;a href=&quot;#Basliklar&quot; class=&quot;headerlink&quot; title=&quot;Başlıklar&quot;&gt;&lt;/a&gt;Başlıklar&lt;/h2&gt;&lt;figure class=&quot;highlight markdown&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;section&quot;&gt;# h1&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;...&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;...&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;section&quot;&gt;###### h6&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;Font-Stilleri&quot;&gt;&lt;a href=&quot;#Font-Stilleri&quot; class=&quot;headerlink&quot; title=&quot;Font Stilleri&quot;&gt;&lt;/a&gt;Font Stilleri&lt;/h2&gt;&lt;figure class=&quot;highlight markdown&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;emphasis&quot;&gt;*italik*&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;strong&quot;&gt;**bold**&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;strong&quot;&gt;**bold ve _italik_*&lt;/span&gt;*&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;~~strikethrough~~&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Kopya" scheme="https://onort.github.io/kategori/Kopya/"/>
+    
+    
+      <category term="markdown" scheme="https://onort.github.io/tags/markdown/"/>
+    
+      <category term="static sites" scheme="https://onort.github.io/tags/static-sites/"/>
     
   </entry>
   

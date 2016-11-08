@@ -2,63 +2,77 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/gulp-pluginler/</loc>
+    <loc>https://onort.github.io/nodejs-postgres-baglanti/</loc>
     
-    <lastmod>2016-11-06T14:40:14.042Z</lastmod>
+    <lastmod>2016-11-08T19:39:32.913Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/vs-code-kisayollar/</loc>
+    <loc>https://onort.github.io/node-paketler/</loc>
+    
+    <lastmod>2016-11-08T19:16:33.104Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://onort.github.io/markdown-nasil/</loc>
+    
+    <lastmod>2016-11-08T15:37:17.089Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://onort.github.io/javascript-es6-node/</loc>
+    
+    <lastmod>2016-11-08T13:14:46.742Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://onort.github.io/gulp-pluginler/</loc>
+    
+    <lastmod>2016-11-08T13:13:06.529Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://onort.github.io/vs-code-kisayollar/</loc>
     
     <lastmod>2016-11-06T13:36:27.884Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/react-higher-order-component/</loc>
+    <loc>https://onort.github.io/react-higher-order-component/</loc>
     
     <lastmod>2016-11-05T20:52:22.073Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/nodejs-postgres-baglanti/</loc>
-    
-    <lastmod>2016-11-05T20:51:47.661Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/nodejs-mysql-baglanti/</loc>
-    
-    <lastmod>2016-11-05T20:51:29.425Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/javascript-higher-order-function/</loc>
+    <loc>https://onort.github.io/javascript-higher-order-function/</loc>
     
     <lastmod>2016-11-05T20:51:11.241Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/hakkinda/index.html</loc>
+    <loc>https://onort.github.io/hakkinda/index.html</loc>
     
     <lastmod>2016-11-05T20:33:23.127Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/etiket/index.html</loc>
+    <loc>https://onort.github.io/etiket/index.html</loc>
     
     <lastmod>2016-11-05T20:32:29.667Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/kategori/index.html</loc>
+    <loc>https://onort.github.io/kategori/index.html</loc>
     
     <lastmod>2016-11-05T20:30:21.511Z</lastmod>
     
