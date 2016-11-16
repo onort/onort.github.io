@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://onort.github.io/"/>
-  <updated>2016-11-08T19:16:33.104Z</updated>
+  <updated>2016-11-16T20:13:57.741Z</updated>
   <id>https://onort.github.io/</id>
   
   <author>
@@ -16,16 +16,72 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>NPM İpuçları</title>
+    <link href="https://onort.github.io/npm-ipuclari/"/>
+    <id>https://onort.github.io/npm-ipuclari/</id>
+    <published>2016-11-16T20:08:30.000Z</published>
+    <updated>2016-11-16T20:13:57.741Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Yardim-Referans"><a href="#Yardim-Referans" class="headerlink" title="Yardım - Referans"></a>Yardım - Referans</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">npm <span class="built_in">help</span> &lt;<span class="built_in">command</span>&gt;</div><div class="line"><span class="comment"># Help for specific npm commands</span></div><div class="line"></div><div class="line">npm &lt;<span class="built_in">command</span>&gt; -h</div><div class="line"><span class="comment"># quick command parameter reference</span></div></pre></td></tr></table></figure>
+<h2 id="npm-icin-defaultlar"><a href="#npm-icin-defaultlar" class="headerlink" title="npm için defaultlar"></a>npm için defaultlar</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">npm init -y</div><div class="line"></div><div class="line">npm config <span class="built_in">set</span> init.author.name &lt;name&gt;</div><div class="line">npm config <span class="built_in">set</span> init.author.email &lt;email&gt;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="Paketler"><a href="#Paketler" class="headerlink" title="Paketler"></a>Paketler</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">npm list</div><div class="line"><span class="comment"># ls, la and ll can be used as aliases for list</span></div><div class="line"></div><div class="line">npm list --depth=0</div><div class="line"></div><div class="line">npm list -g --depth=0</div><div class="line"></div><div class="line"><span class="comment"># A package homepage can be opened with:</span></div><div class="line">npm home &lt;package&gt;</div><div class="line"><span class="comment"># or its documentation:</span></div><div class="line">npm docs &lt;package&gt;</div><div class="line"><span class="comment"># or its repo:</span></div><div class="line">npm repo &lt;package&gt;</div></pre></td></tr></table></figure>
+<h2 id="Dependency-Kilit"><a href="#Dependency-Kilit" class="headerlink" title="Dependency Kilit"></a>Dependency Kilit</h2><p>By default, npm references package version numbers with the caret (^) character when installing a package with –save or –save-dev</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">npm shrinkwrap</div><div class="line"><span class="comment"># generates an npm-shrinkwrap.json file. This allows you to pin the dependencies of your project to the specific version you’re currently using within your node_modules directory.</span></div><div class="line"></div><div class="line">npm config <span class="built_in">set</span> save-prefix=<span class="string">"~"</span></div><div class="line">npm config <span class="built_in">set</span> save-exact <span class="literal">true</span></div></pre></td></tr></table></figure>
+<h2 id="Outdated-Paketler"><a href="#Outdated-Paketler" class="headerlink" title="Outdated Paketler"></a>Outdated Paketler</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">npm outdated</div><div class="line"></div><div class="line"><span class="comment"># examine the current and historical versions:</span></div><div class="line">npm view &lt;package&gt; versions</div></pre></td></tr></table></figure>
+<h2 id="Guncellemeler"><a href="#Guncellemeler" class="headerlink" title="Güncellemeler"></a>Güncellemeler</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">npm install -g npm</div><div class="line"></div><div class="line"><span class="comment"># You may also need to rebuild C++ addons when a new major version of Node is released</span></div><div class="line">npm rebuild</div></pre></td></tr></table></figure>
+<h2 id="Muhtelif"><a href="#Muhtelif" class="headerlink" title="Muhtelif"></a>Muhtelif</h2><ul>
+<li><code>npm run foo</code> will also run <code>prefoo</code> and <code>postfoo</code> if you have them</li>
+<li>You can install GitHub repos with <code>npm i org-name/repo-name</code></li>
+</ul>
+<hr>
+<ul>
+<li><a href="https://www.sitepoint.com/10-npm-tips-and-tricks" target="_blank" rel="external">10 Tips and Tricks That Will Make You an npm Ninja</a></li>
+<li><a href="https://github.com/npm/npm-tips" target="_blank" rel="external">npm-tips</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Yardim-Referans&quot;&gt;&lt;a href=&quot;#Yardim-Referans&quot; class=&quot;headerlink&quot; title=&quot;Yardım - Referans&quot;&gt;&lt;/a&gt;Yardım - Referans&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;npm &lt;span class=&quot;built_in&quot;&gt;help&lt;/span&gt; &amp;lt;&lt;span class=&quot;built_in&quot;&gt;command&lt;/span&gt;&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Help for specific npm commands&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;npm &amp;lt;&lt;span class=&quot;built_in&quot;&gt;command&lt;/span&gt;&amp;gt; -h&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# quick command parameter reference&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;npm-icin-defaultlar&quot;&gt;&lt;a href=&quot;#npm-icin-defaultlar&quot; class=&quot;headerlink&quot; title=&quot;npm için defaultlar&quot;&gt;&lt;/a&gt;npm için defaultlar&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;npm init -y&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;npm config &lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt; init.author.name &amp;lt;name&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;npm config &lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt; init.author.email &amp;lt;email&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Node.js" scheme="https://onort.github.io/kategori/Node-js/"/>
+    
+    
+      <category term="verimlilik" scheme="https://onort.github.io/tags/verimlilik/"/>
+    
+      <category term="node" scheme="https://onort.github.io/tags/node/"/>
+    
+      <category term="npm" scheme="https://onort.github.io/tags/npm/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Node Paketler</title>
     <link href="https://onort.github.io/node-paketler/"/>
     <id>https://onort.github.io/node-paketler/</id>
     <published>2016-11-08T18:45:56.000Z</published>
-    <updated>2016-11-08T19:16:33.104Z</updated>
+    <updated>2016-11-16T20:14:52.306Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Database"><a href="#Database" class="headerlink" title="Database"></a>Database</h2><ul>
 <li><a href="https://www.npmjs.com/package/knex" target="_blank" rel="external">knex</a>: A batteries-included SQL query &amp; schema builder for Postgres, MySQL and SQLite3 and the Browser</li>
 <li><a href="https://www.npmjs.com/package/pg" target="_blank" rel="external">pg</a>: PostgreSQL client - pure javascript &amp; libpq with the same API</li>
 <li><a href="https://www.npmjs.com/package/bookshelf" target="_blank" rel="external">bookshelf</a>: A lightweight ORM for PostgreSQL, MySQL, and SQLite3</li>
+</ul>
+<a id="more"></a>
+<h2 id="Users"><a href="#Users" class="headerlink" title="Users?"></a>Users?</h2><ul>
+<li><a href="https://www.npmjs.com/package/shortid" target="_blank" rel="external">shortid</a>: Amazingly short non-sequential url-friendly unique id generator.</li>
+<li><a href="https://www.npmjs.com/package/uuid" target="_blank" rel="external">uuid</a>: Rigorous implementation of RFC4122 (v1 and v4) UUIDs. (time-based or random)</li>
+</ul>
+<h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><ul>
+<li><a href="https://www.npmjs.com/package/axios" target="_blank" rel="external">axios</a>: Promise based HTTP client for the browser and node.js</li>
+<li><a href="https://www.npmjs.com/package/superagent" target="_blank" rel="external">superagent</a>: elegant &amp; feature rich browser / node HTTP with a fluent API</li>
+</ul>
+<h2 id="Image"><a href="#Image" class="headerlink" title="Image"></a>Image</h2><ul>
+<li><a href="https://github.com/EyalAr/lwip" target="_blank" rel="external">lwip</a>: Light Weight Image Processor for NodeJS (w/o any dependency)</li>
 </ul>
 <h2 id="Guvenlik"><a href="#Guvenlik" class="headerlink" title="Güvenlik"></a>Güvenlik</h2><ul>
 <li><a href="https://www.npmjs.com/package/bcrypt" target="_blank" rel="external">bcrypt</a>: A bcrypt library for NodeJS.</li>
@@ -35,7 +91,10 @@
     <summary type="html">
     
       &lt;h2 id=&quot;Database&quot;&gt;&lt;a href=&quot;#Database&quot; class=&quot;headerlink&quot; title=&quot;Database&quot;&gt;&lt;/a&gt;Database&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/k
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/knex&quot;&gt;knex&lt;/a&gt;: A batteries-included SQL query &amp;amp; schema builder for Postgres, MySQL and SQLite3 and the Browser&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/pg&quot;&gt;pg&lt;/a&gt;: PostgreSQL client - pure javascript &amp;amp; libpq with the same API&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/bookshelf&quot;&gt;bookshelf&lt;/a&gt;: A lightweight ORM for PostgreSQL, MySQL, and SQLite3&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -51,15 +110,17 @@
     <link href="https://onort.github.io/javascript-es6-node/"/>
     <id>https://onort.github.io/javascript-es6-node/</id>
     <published>2016-11-08T13:05:19.000Z</published>
-    <updated>2016-11-08T13:14:46.742Z</updated>
+    <updated>2016-11-15T15:09:45.729Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://nodesource.com/blog/six-of-the-most-exciting-es6-features-in-node-js-v6-lts?utm_source=nodeweekly&amp;utm_medium=email" target="_blank" rel="external">Exiting ES6 features for NodeJS</a></p>
 <h2 id="Setting-defaults-for-function-parameters"><a href="#Setting-defaults-for-function-parameters" class="headerlink" title="Setting defaults for function parameters"></a>Setting defaults for function parameters</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">toThePower</span>(<span class="params">value, exponent = <span class="number">2</span></span>) </span>&#123;</div><div class="line">  <span class="comment">// The rest of your code</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">toThePower(<span class="number">1</span>, <span class="literal">undefined</span>) <span class="comment">// exponent defaults to 2</span></div></pre></td></tr></table></figure>
 <a id="more"></a>
 <h2 id="Extracting-Data-from-Arrays-and-Objects-with-Destructuring"><a href="#Extracting-Data-from-Arrays-and-Objects-with-Destructuring" class="headerlink" title="Extracting Data from Arrays and Objects with Destructuring"></a>Extracting Data from Arrays and Objects with Destructuring</h2><p>TODO</p>
 <h2 id="Checking-Array-Values-with-Array-includes"><a href="#Checking-Array-Values-with-Array-includes" class="headerlink" title="Checking Array Values with Array#includes()"></a>Checking Array Values with Array#includes()</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[<span class="number">1</span>, <span class="number">2</span>].includes(<span class="number">1</span>) <span class="comment">// returns true</span></div><div class="line"></div><div class="line">[<span class="number">1</span>, <span class="number">2</span>].includes(<span class="number">4</span>) <span class="comment">// returns false</span></div></pre></td></tr></table></figure>
+<h2 id="find-findIndex"><a href="#find-findIndex" class="headerlink" title="find/findIndex"></a>find/findIndex</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> ages = [<span class="number">12</span>, <span class="number">19</span>, <span class="number">6</span>, <span class="number">4</span>];</div><div class="line"></div><div class="line"><span class="keyword">let</span> firstAdult = ages.find(<span class="function"><span class="params">age</span> =&gt;</span> age &gt;= <span class="number">18</span>); <span class="comment">// 19</span></div><div class="line"><span class="keyword">let</span> firstAdultIndex = ages.findIndex(<span class="function"><span class="params">age</span> =&gt;</span> age &gt;= <span class="number">18</span>); <span class="comment">// 1</span></div></pre></td></tr></table></figure>
 <h2 id="Allowing-Extra-Arguments-in-Functions"><a href="#Allowing-Extra-Arguments-in-Functions" class="headerlink" title="Allowing Extra Arguments in Functions"></a>Allowing Extra Arguments in Functions</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">concat</span>(<span class="params">joiner, ...args</span>) </span>&#123;</div><div class="line"></div><div class="line">  <span class="comment">// args is an actual Array</span></div><div class="line"></div><div class="line">  <span class="keyword">return</span> args.join(joiner)</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">concat(‘_’, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>) <span class="comment">// returns ‘1_2_3’</span></div></pre></td></tr></table></figure>
-<h2 id="Expanding-Arrays-with-the-Spread-Operator"><a href="#Expanding-Arrays-with-the-Spread-Operator" class="headerlink" title="Expanding Arrays with the Spread Operator"></a>Expanding Arrays with the Spread Operator</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>]</div><div class="line"></div><div class="line"><span class="keyword">const</span> arr2 = [...arr1, <span class="number">3</span>, <span class="number">4</span>]</div><div class="line"><span class="comment">// arr2: [1, 2, 3, 4]</span></div></pre></td></tr></table></figure>]]></content>
+<h2 id="Expanding-Arrays-with-the-Spread-Operator"><a href="#Expanding-Arrays-with-the-Spread-Operator" class="headerlink" title="Expanding Arrays with the Spread Operator"></a>Expanding Arrays with the Spread Operator</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>]</div><div class="line"></div><div class="line"><span class="keyword">const</span> arr2 = [...arr1, <span class="number">3</span>, <span class="number">4</span>]</div><div class="line"><span class="comment">// arr2: [1, 2, 3, 4]</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> numbers = [<span class="number">9</span>, <span class="number">4</span>, <span class="number">7</span>, <span class="number">1</span>];</div><div class="line"><span class="built_in">Math</span>.min(...numbers); <span class="comment">// 1</span></div></pre></td></tr></table></figure>
+]]></content>
     
     <summary type="html">
     

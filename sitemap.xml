@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://onort.github.io/node-paketler/</loc>
+    
+    <lastmod>2016-11-16T20:14:52.306Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://onort.github.io/npm-ipuclari/</loc>
+    
+    <lastmod>2016-11-16T20:13:57.741Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://onort.github.io/javascript-es6-node/</loc>
+    
+    <lastmod>2016-11-15T15:09:45.729Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://onort.github.io/nodejs-postgres-baglanti/</loc>
     
     <lastmod>2016-11-08T19:39:32.913Z</lastmod>
@@ -9,23 +30,9 @@
   </url>
   
   <url>
-    <loc>https://onort.github.io/node-paketler/</loc>
-    
-    <lastmod>2016-11-08T19:16:33.104Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://onort.github.io/markdown-nasil/</loc>
     
     <lastmod>2016-11-08T15:37:17.089Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://onort.github.io/javascript-es6-node/</loc>
-    
-    <lastmod>2016-11-08T13:14:46.742Z</lastmod>
     
   </url>
   
