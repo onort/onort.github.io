@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://onort.github.io/"/>
-  <updated>2016-11-16T20:13:57.741Z</updated>
+  <updated>2016-11-17T19:17:09.748Z</updated>
   <id>https://onort.github.io/</id>
   
   <author>
@@ -16,11 +16,78 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ImmutableJS Nasıl?</title>
+    <link href="https://onort.github.io/immutable-js-nasil/"/>
+    <id>https://onort.github.io/immutable-js-nasil/</id>
+    <published>2016-11-17T19:11:54.000Z</published>
+    <updated>2016-11-17T19:17:09.748Z</updated>
+    
+    <content type="html"><![CDATA[<p>Immutable data cannot be changed once created, leading to much simpler application development, no defensive copying, and enabling advanced memoization and change detection techniques with simple logic. Persistent data presents a mutative API which does not update the data in-place, but instead always yields new updated data.</p>
+<h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><p>Lists are ordered indexed dense collections, much like a JavaScript Array. <a href="https://facebook.github.io/immutable-js/docs/#/List" target="_blank" rel="external">Docs</a></p>
+<ul>
+<li><code>List.isList(maybeList)</code>: True if the provided value is a List</li>
+<li><code>set(index, value)</code>: Returns a new List which includes value at index. If index already exists in this List, it will be replaced.</li>
+<li><code>get(index)</code>: Returns the value associated with the provided key, or notSetValue if the Iterable does not contain this key.</li>
+<li><code>set(index, value)</code>: Returns a new List which includes value at index. If index already exists in this List, it will be replaced.<a id="more"></a></li>
+<li><code>delete(index)</code>: Returns a new List which excludes this index and with a size 1 less than this List. Values at indices above index are shifted down by 1 to fill the position.</li>
+<li><code>insert(index, value)</code>: Returns a new List with value at index with a size 1 more than this List. Values at indices above index are shifted over by 1.</li>
+<li><code>push(...values)</code>: Returns a new List with the provided values appended, starting at this List’s size.</li>
+</ul>
+<h2 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h2><p>Immutable Map is an unordered Iterable.Keyed of (key, value) pairs with O(log32 N) gets and O(log32 N) persistent sets.</p>
+<p><a href="https://facebook.github.io/immutable-js/docs/#/Map" target="_blank" rel="external">Docs</a></p>
+<ul>
+<li><code>Map.isMap(maybeMap)</code>: True if the provided value is a Map</li>
+<li><p><code>set(key, value)</code>: Returns a new Map also containing the new key, value pair. If an equivalent key already exists in this Map, it will be replaced.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> newMap = oldMap.set(<span class="string">'key'</span>, <span class="string">'value'</span>)</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>get(key)</code>: Returns the value associated with the provided key, or notSetValue if the Iterable does not contain this key.</p>
+</li>
+<li><code>delete(key)</code>: Returns a new Map which excludes this key.</li>
+<li><code>has(key)</code>: True if a key exists within this Iterable, using Immutable.is to determine equality</li>
+<li><code>includes(value)</code>: True if a value exists within this Iterable, using Immutable.is to determine equality</li>
+<li><p><code>merge()</code>: Returns a new Map resulting from merging the provided Iterables (or JS objects) into this Map.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = Immutable.Map(&#123;<span class="attr">a</span>: <span class="number">10</span>, <span class="attr">b</span>: <span class="number">20</span>, <span class="attr">c</span>: <span class="number">30</span>&#125;);</div><div class="line"><span class="keyword">var</span> y = Immutable.Map(&#123;<span class="attr">b</span>: <span class="number">40</span>, <span class="attr">a</span>: <span class="number">50</span>, <span class="attr">d</span>: <span class="number">60</span>&#125;);</div><div class="line">x.merge(y) <span class="comment">// &#123; a: 50, b: 40, c: 30, d: 60 &#125;</span></div><div class="line">y.merge(x) <span class="comment">// &#123; b: 20, a: 10, d: 60, c: 30 &#125;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><code>update()</code>: Returns a new Map having updated the value at this key with the return value of calling updater with the existing value, or notSetValue if the key was not set. If called with only a single argument, updater is called with the Map itself.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">update(updater: <span class="function">(<span class="params">value: <span class="built_in">Map</span>&lt;K, V&gt;</span>) =&gt;</span> <span class="built_in">Map</span>&lt;K, V&gt;): <span class="built_in">Map</span>&lt;K, V&gt;</div><div class="line">update(key: K, <span class="attr">updater</span>: <span class="function">(<span class="params">value: V</span>) =&gt;</span> V): <span class="built_in">Map</span>&lt;K, V&gt;</div><div class="line">update(key: K, <span class="attr">notSetValue</span>: V, <span class="attr">updater</span>: <span class="function">(<span class="params">value: V</span>) =&gt;</span> V): <span class="built_in">Map</span>&lt;K, V&gt;</div><div class="line"></div><div class="line"><span class="comment">//Equivalent to:</span></div><div class="line">map.set(key, updater(map.get(key, notSetValue))).</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><a href="https://facebook.github.io/immutable-js/docs/#/" target="_blank" rel="external">ImmutableJS Docs</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Immutable data cannot be changed once created, leading to much simpler application development, no defensive copying, and enabling advanced memoization and change detection techniques with simple logic. Persistent data presents a mutative API which does not update the data in-place, but instead always yields new updated data.&lt;/p&gt;
+&lt;h2 id=&quot;List&quot;&gt;&lt;a href=&quot;#List&quot; class=&quot;headerlink&quot; title=&quot;List&quot;&gt;&lt;/a&gt;List&lt;/h2&gt;&lt;p&gt;Lists are ordered indexed dense collections, much like a JavaScript Array. &lt;a href=&quot;https://facebook.github.io/immutable-js/docs/#/List&quot;&gt;Docs&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;List.isList(maybeList)&lt;/code&gt;: True if the provided value is a List&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;set(index, value)&lt;/code&gt;: Returns a new List which includes value at index. If index already exists in this List, it will be replaced.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;get(index)&lt;/code&gt;: Returns the value associated with the provided key, or notSetValue if the Iterable does not contain this key.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;set(index, value)&lt;/code&gt;: Returns a new List which includes value at index. If index already exists in this List, it will be replaced.
+    
+    </summary>
+    
+      <category term="Kopya" scheme="https://onort.github.io/kategori/Kopya/"/>
+    
+      <category term="Javascript" scheme="https://onort.github.io/kategori/Kopya/Javascript/"/>
+    
+    
+      <category term="javascript tooling" scheme="https://onort.github.io/tags/javascript-tooling/"/>
+    
+      <category term="redux" scheme="https://onort.github.io/tags/redux/"/>
+    
+      <category term="javascript" scheme="https://onort.github.io/tags/javascript/"/>
+    
+      <category term="react" scheme="https://onort.github.io/tags/react/"/>
+    
+  </entry>
+  
+  <entry>
     <title>NPM İpuçları</title>
     <link href="https://onort.github.io/npm-ipuclari/"/>
     <id>https://onort.github.io/npm-ipuclari/</id>
-    <published>2016-11-16T20:08:30.000Z</published>
-    <updated>2016-11-16T20:13:57.741Z</updated>
+    <published>2016-11-09T20:08:30.000Z</published>
+    <updated>2016-11-16T20:17:14.560Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Yardim-Referans"><a href="#Yardim-Referans" class="headerlink" title="Yardım - Referans"></a>Yardım - Referans</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">npm <span class="built_in">help</span> &lt;<span class="built_in">command</span>&gt;</div><div class="line"><span class="comment"># Help for specific npm commands</span></div><div class="line"></div><div class="line">npm &lt;<span class="built_in">command</span>&gt; -h</div><div class="line"><span class="comment"># quick command parameter reference</span></div></pre></td></tr></table></figure>
 <h2 id="npm-icin-defaultlar"><a href="#npm-icin-defaultlar" class="headerlink" title="npm için defaultlar"></a>npm için defaultlar</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">npm init -y</div><div class="line"></div><div class="line">npm config <span class="built_in">set</span> init.author.name &lt;name&gt;</div><div class="line">npm config <span class="built_in">set</span> init.author.email &lt;email&gt;</div></pre></td></tr></table></figure>

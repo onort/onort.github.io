@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://onort.github.io/node-paketler/</loc>
+    <loc>https://onort.github.io/immutable-js-nasil/</loc>
     
-    <lastmod>2016-11-16T20:14:52.306Z</lastmod>
+    <lastmod>2016-11-17T19:17:09.748Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://onort.github.io/npm-ipuclari/</loc>
     
-    <lastmod>2016-11-16T20:13:57.741Z</lastmod>
+    <lastmod>2016-11-16T20:17:14.560Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://onort.github.io/node-paketler/</loc>
+    
+    <lastmod>2016-11-16T20:14:52.306Z</lastmod>
     
   </url>
   
