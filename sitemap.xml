@@ -2,9 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://onort.github.io/javascript-es6-node/</loc>
+    
+    <lastmod>2016-12-04T18:32:36.503Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://onort.github.io/iterators-generators/</loc>
+    
+    <lastmod>2016-12-04T18:29:06.079Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://onort.github.io/vs-code-kisayollar/</loc>
+    
+    <lastmod>2016-11-23T15:51:10.775Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://onort.github.io/node-paketler/</loc>
+    
+    <lastmod>2016-11-23T15:12:35.021Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://onort.github.io/express-js-nasil/</loc>
+    
+    <lastmod>2016-11-21T17:41:30.146Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://onort.github.io/immutable-js-nasil/</loc>
     
-    <lastmod>2016-11-17T19:17:09.748Z</lastmod>
+    <lastmod>2016-11-18T13:42:29.574Z</lastmod>
     
   </url>
   
@@ -12,20 +47,6 @@
     <loc>https://onort.github.io/npm-ipuclari/</loc>
     
     <lastmod>2016-11-16T20:17:14.560Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://onort.github.io/node-paketler/</loc>
-    
-    <lastmod>2016-11-16T20:14:52.306Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://onort.github.io/javascript-es6-node/</loc>
-    
-    <lastmod>2016-11-15T15:09:45.729Z</lastmod>
     
   </url>
   
@@ -47,13 +68,6 @@
     <loc>https://onort.github.io/gulp-pluginler/</loc>
     
     <lastmod>2016-11-08T13:13:06.529Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://onort.github.io/vs-code-kisayollar/</loc>
-    
-    <lastmod>2016-11-06T13:36:27.884Z</lastmod>
     
   </url>
   

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://onort.github.io/"/>
-  <updated>2016-11-17T19:17:09.748Z</updated>
+  <updated>2016-12-04T18:29:06.079Z</updated>
   <id>https://onort.github.io/</id>
   
   <author>
@@ -16,19 +16,77 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Itaretors &amp; Generators</title>
+    <link href="https://onort.github.io/iterators-generators/"/>
+    <id>https://onort.github.io/iterators-generators/</id>
+    <published>2016-12-04T18:05:24.000Z</published>
+    <updated>2016-12-04T18:29:06.079Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Iterators"><a href="#Iterators" class="headerlink" title="Iterators"></a>Iterators</h2><p> In JavaScript an iterator is an object that provides a next() method which returns the next item in the sequence.</p>
+<p> <strong>String, Array, TypedArray, Map</strong> and <strong>Set</strong> are all built-in iterables, because the prototype objects of them all have a <code>Symbol.iterator</code> method.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> myArray = [<span class="number">1</span>,<span class="number">2</span>];</div><div class="line"></div><div class="line"><span class="keyword">let</span> iterator = myArray[<span class="built_in">Symbol</span>.iterator]();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(iterator.next()); <span class="comment">// &#123; done: false, value: 1 &#125;</span></div><div class="line"><span class="built_in">console</span>.log(iterator.next()); <span class="comment">// &#123; done: false, value: 2 &#125;</span></div><div class="line"><span class="built_in">console</span>.log(iterator.next()); <span class="comment">// &#123; done: true, value: undefined &#125;</span></div></pre></td></tr></table></figure>
+<h2 id="Generators"><a href="#Generators" class="headerlink" title="Generators"></a>Generators</h2><p>A generator is a special type of function that works as a factory for iterators. A function becomes a generator if it contains one or more <code>yield</code> expressions and if it uses the <code>function*</code> syntax.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span>* <span class="title">generator</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">yield</span> <span class="number">1</span>;</div><div class="line">  <span class="keyword">yield</span> <span class="number">2</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">let</span> iterator = generator();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(iterator.next()); <span class="comment">// &#123; done: false, value: 1 &#125;</span></div><div class="line"><span class="built_in">console</span>.log(iterator.next()); <span class="comment">// &#123; done: false, value: 2 &#125;</span></div><div class="line"><span class="built_in">console</span>.log(iterator.next()); <span class="comment">// &#123; done: true, value: undefined &#125;</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span>* <span class="title">generator</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">yield</span> <span class="number">1</span>;</div><div class="line">  <span class="keyword">yield</span>* anotherGenerator();</div><div class="line">  <span class="keyword">yield</span> <span class="number">3</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span>* <span class="title">anotherGenerator</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">yield</span> <span class="number">2</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">let</span> iterator = generator();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(iterator.next()); <span class="comment">// &#123; done: false, value: 1 &#125;</span></div><div class="line"><span class="built_in">console</span>.log(iterator.next()); <span class="comment">// &#123; done: false, value: 2 &#125;</span></div><div class="line"><span class="built_in">console</span>.log(iterator.next()); <span class="comment">// &#123; done: false, value: 3 &#125;</span></div><div class="line"><span class="built_in">console</span>.log(iterator.next()); <span class="comment">// &#123; done: true, value: undefined &#125;</span></div></pre></td></tr></table></figure>
+<h3 id="Ornek-Kullanim"><a href="#Ornek-Kullanim" class="headerlink" title="Örnek Kullanım"></a>Örnek Kullanım</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">request</span>(<span class="params">url</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>) </span>&#123;</div><div class="line">    makeAjaxCall(url, <span class="function"><span class="keyword">function</span>(<span class="params">err, text</span>) </span>&#123;</div><div class="line">      <span class="keyword">if</span> (err) reject(err);</div><div class="line">      <span class="keyword">else</span> resolve(text); </div><div class="line">    &#125;);</div><div class="line">  &#125;);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span>* <span class="title">generator</span>(<span class="params">url</span>) </span>&#123;</div><div class="line">  <span class="keyword">yield</span> request(url1);</div><div class="line">  <span class="keyword">yield</span> request(url2); <span class="comment">// This can be run after promise from url1 resolved or rejected</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Iterators&quot;&gt;&lt;a href=&quot;#Iterators&quot; class=&quot;headerlink&quot; title=&quot;Iterators&quot;&gt;&lt;/a&gt;Iterators&lt;/h2&gt;&lt;p&gt; In JavaScript an iterator is an object th
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="https://onort.github.io/kategori/JavaScript/"/>
+    
+    
+      <category term="vanilla javascript" scheme="https://onort.github.io/tags/vanilla-javascript/"/>
+    
+      <category term="es6" scheme="https://onort.github.io/tags/es6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ExpressJS Nasıl?</title>
+    <link href="https://onort.github.io/express-js-nasil/"/>
+    <id>https://onort.github.io/express-js-nasil/</id>
+    <published>2016-11-21T17:38:59.000Z</published>
+    <updated>2016-11-21T17:41:30.146Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="res-locals"><a href="#res-locals" class="headerlink" title="res.locals"></a>res.locals</h3><p>An object that contains response local variables scoped to the request, and therefore available only to the view(s) rendered during that request / response cycle (if any).</p>
+<p>This property is <strong>useful for exposing request-level information</strong> such as the request path name, authenticated user, user settings, and so on.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">app.use(<span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>)</span>&#123;</div><div class="line">  res.locals.user = req.user;</div><div class="line">  res.locals.authenticated = ! req.user.anonymous;</div><div class="line">  next();</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;res-locals&quot;&gt;&lt;a href=&quot;#res-locals&quot; class=&quot;headerlink&quot; title=&quot;res.locals&quot;&gt;&lt;/a&gt;res.locals&lt;/h3&gt;&lt;p&gt;An object that contains response local
+    
+    </summary>
+    
+      <category term="Node.js" scheme="https://onort.github.io/kategori/Node-js/"/>
+    
+    
+      <category term="express" scheme="https://onort.github.io/tags/express/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ImmutableJS Nasıl?</title>
     <link href="https://onort.github.io/immutable-js-nasil/"/>
     <id>https://onort.github.io/immutable-js-nasil/</id>
     <published>2016-11-17T19:11:54.000Z</published>
-    <updated>2016-11-17T19:17:09.748Z</updated>
+    <updated>2016-11-18T13:42:29.574Z</updated>
     
     <content type="html"><![CDATA[<p>Immutable data cannot be changed once created, leading to much simpler application development, no defensive copying, and enabling advanced memoization and change detection techniques with simple logic. Persistent data presents a mutative API which does not update the data in-place, but instead always yields new updated data.</p>
+<ul>
+<li><code>fromJS()</code>: Deeply converts plain JS objects and arrays to Immutable Maps and Lists. If <code>reviver</code> is not provided, the default behavior will convert <strong>Arrays into Lists</strong> and <strong>Objects into Maps</strong>.</li>
+</ul>
 <h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><p>Lists are ordered indexed dense collections, much like a JavaScript Array. <a href="https://facebook.github.io/immutable-js/docs/#/List" target="_blank" rel="external">Docs</a></p>
 <ul>
-<li><code>List.isList(maybeList)</code>: True if the provided value is a List</li>
+<li><code>List.isList(maybeList)</code>: True if the provided value is a List <a id="more"></a></li>
 <li><code>set(index, value)</code>: Returns a new List which includes value at index. If index already exists in this List, it will be replaced.</li>
 <li><code>get(index)</code>: Returns the value associated with the provided key, or notSetValue if the Iterable does not contain this key.</li>
-<li><code>set(index, value)</code>: Returns a new List which includes value at index. If index already exists in this List, it will be replaced.<a id="more"></a></li>
+<li><code>set(index, value)</code>: Returns a new List which includes value at index. If index already exists in this List, it will be replaced.</li>
 <li><code>delete(index)</code>: Returns a new List which excludes this index and with a size 1 less than this List. Values at indices above index are shifted down by 1 to fill the position.</li>
 <li><code>insert(index, value)</code>: Returns a new List with value at index with a size 1 more than this List. Values at indices above index are shifted over by 1.</li>
 <li><code>push(...values)</code>: Returns a new List with the provided values appended, starting at this List’s size.</li>
@@ -37,19 +95,30 @@
 <p><a href="https://facebook.github.io/immutable-js/docs/#/Map" target="_blank" rel="external">Docs</a></p>
 <ul>
 <li><code>Map.isMap(maybeMap)</code>: True if the provided value is a Map</li>
+<li><code>myMap.toJS()</code>: Deeply converts this Iterable to equivalent JS.</li>
 <li><p><code>set(key, value)</code>: Returns a new Map also containing the new key, value pair. If an equivalent key already exists in this Map, it will be replaced.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> newMap = oldMap.set(<span class="string">'key'</span>, <span class="string">'value'</span>)</div></pre></td></tr></table></figure>
 </li>
 <li><p><code>get(key)</code>: Returns the value associated with the provided key, or notSetValue if the Iterable does not contain this key.</p>
 </li>
-<li><code>delete(key)</code>: Returns a new Map which excludes this key.</li>
+<li><p><code>getIn()</code>: Returns the value found by following a path of keys or indices through nested Iterables.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">getIn(searchKeyPath: <span class="built_in">Array</span>&lt;any&gt;, notSetValue?: any): any</div><div class="line"></div><div class="line"><span class="keyword">const</span> aVotes = vote.getIn([<span class="string">'tally'</span>, a], <span class="number">0</span>);</div><div class="line"><span class="keyword">const</span> bVotes = vote.getIn([<span class="string">'tally'</span>, b], <span class="number">0</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>delete(key)</code>: Returns a new Map which excludes this key.</p>
+</li>
 <li><code>has(key)</code>: True if a key exists within this Iterable, using Immutable.is to determine equality</li>
 <li><code>includes(value)</code>: True if a value exists within this Iterable, using Immutable.is to determine equality</li>
 <li><p><code>merge()</code>: Returns a new Map resulting from merging the provided Iterables (or JS objects) into this Map.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = Immutable.Map(&#123;<span class="attr">a</span>: <span class="number">10</span>, <span class="attr">b</span>: <span class="number">20</span>, <span class="attr">c</span>: <span class="number">30</span>&#125;);</div><div class="line"><span class="keyword">var</span> y = Immutable.Map(&#123;<span class="attr">b</span>: <span class="number">40</span>, <span class="attr">a</span>: <span class="number">50</span>, <span class="attr">d</span>: <span class="number">60</span>&#125;);</div><div class="line">x.merge(y) <span class="comment">// &#123; a: 50, b: 40, c: 30, d: 60 &#125;</span></div><div class="line">y.merge(x) <span class="comment">// &#123; b: 20, a: 10, d: 60, c: 30 &#125;</span></div></pre></td></tr></table></figure>
 </li>
+<li><p><code>take(amount)</code>: Returns a new Iterable of the same type which includes the first amount entries from this Iterable.</p>
+</li>
+<li><code>skip(amount)</code>: Returns a new Iterable of the same type which excludes the first amount entries from this Iterable.</li>
 <li><p><code>update()</code>: Returns a new Map having updated the value at this key with the return value of calling updater with the existing value, or notSetValue if the key was not set. If called with only a single argument, updater is called with the Map itself.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">update(updater: <span class="function">(<span class="params">value: <span class="built_in">Map</span>&lt;K, V&gt;</span>) =&gt;</span> <span class="built_in">Map</span>&lt;K, V&gt;): <span class="built_in">Map</span>&lt;K, V&gt;</div><div class="line">update(key: K, <span class="attr">updater</span>: <span class="function">(<span class="params">value: V</span>) =&gt;</span> V): <span class="built_in">Map</span>&lt;K, V&gt;</div><div class="line">update(key: K, <span class="attr">notSetValue</span>: V, <span class="attr">updater</span>: <span class="function">(<span class="params">value: V</span>) =&gt;</span> V): <span class="built_in">Map</span>&lt;K, V&gt;</div><div class="line"></div><div class="line"><span class="comment">//Equivalent to:</span></div><div class="line">map.set(key, updater(map.get(key, notSetValue))).</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>updateIn()</code>: Returns a new Map having applied the updater to the entry found at the keyPath.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">updateIn(keyPath: <span class="built_in">Array</span>&lt;any&gt;, <span class="attr">updater</span>: <span class="function">(<span class="params">value: any</span>) =&gt;</span> any): <span class="built_in">Map</span>&lt;K, V&gt;</div><div class="line"></div><div class="line"><span class="keyword">var</span> data = Immutable.fromJS(&#123; <span class="attr">a</span>: &#123; <span class="attr">b</span>: &#123; <span class="attr">c</span>: <span class="number">10</span> &#125; &#125; &#125;);</div><div class="line">data = data.updateIn([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>], val =&gt; val * <span class="number">2</span>);</div><div class="line"><span class="comment">// &#123; a: &#123; b: &#123; c: 20 &#125; &#125; &#125;</span></div><div class="line"><span class="comment">//If the value at the end is missing, initialize it with "0".</span></div><div class="line">data = data.updateIn([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>], <span class="number">0</span>,  val =&gt; val = myValue);</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <p><a href="https://facebook.github.io/immutable-js/docs/#/" target="_blank" rel="external">ImmutableJS Docs</a></p>
@@ -58,12 +127,12 @@
     <summary type="html">
     
       &lt;p&gt;Immutable data cannot be changed once created, leading to much simpler application development, no defensive copying, and enabling advanced memoization and change detection techniques with simple logic. Persistent data presents a mutative API which does not update the data in-place, but instead always yields new updated data.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;fromJS()&lt;/code&gt;: Deeply converts plain JS objects and arrays to Immutable Maps and Lists. If &lt;code&gt;reviver&lt;/code&gt; is not provided, the default behavior will convert &lt;strong&gt;Arrays into Lists&lt;/strong&gt; and &lt;strong&gt;Objects into Maps&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&quot;List&quot;&gt;&lt;a href=&quot;#List&quot; class=&quot;headerlink&quot; title=&quot;List&quot;&gt;&lt;/a&gt;List&lt;/h2&gt;&lt;p&gt;Lists are ordered indexed dense collections, much like a JavaScript Array. &lt;a href=&quot;https://facebook.github.io/immutable-js/docs/#/List&quot;&gt;Docs&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;List.isList(maybeList)&lt;/code&gt;: True if the provided value is a List&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;set(index, value)&lt;/code&gt;: Returns a new List which includes value at index. If index already exists in this List, it will be replaced.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;get(index)&lt;/code&gt;: Returns the value associated with the provided key, or notSetValue if the Iterable does not contain this key.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;set(index, value)&lt;/code&gt;: Returns a new List which includes value at index. If index already exists in this List, it will be replaced.
+&lt;li&gt;&lt;code&gt;List.isList(maybeList)&lt;/code&gt;: True if the provided value is a List
     
     </summary>
     
@@ -131,27 +200,44 @@
     <link href="https://onort.github.io/node-paketler/"/>
     <id>https://onort.github.io/node-paketler/</id>
     <published>2016-11-08T18:45:56.000Z</published>
-    <updated>2016-11-16T20:14:52.306Z</updated>
+    <updated>2016-11-23T15:12:35.021Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Database"><a href="#Database" class="headerlink" title="Database"></a>Database</h2><ul>
 <li><a href="https://www.npmjs.com/package/knex" target="_blank" rel="external">knex</a>: A batteries-included SQL query &amp; schema builder for Postgres, MySQL and SQLite3 and the Browser</li>
 <li><a href="https://www.npmjs.com/package/pg" target="_blank" rel="external">pg</a>: PostgreSQL client - pure javascript &amp; libpq with the same API</li>
 <li><a href="https://www.npmjs.com/package/bookshelf" target="_blank" rel="external">bookshelf</a>: A lightweight ORM for PostgreSQL, MySQL, and SQLite3</li>
+<li><a href="https://www.npmjs.com/package/mongoose" target="_blank" rel="external">mongoose</a>: Mongoose MongoDB ODM</li>
 </ul>
 <a id="more"></a>
 <h2 id="Users"><a href="#Users" class="headerlink" title="Users?"></a>Users?</h2><ul>
 <li><a href="https://www.npmjs.com/package/shortid" target="_blank" rel="external">shortid</a>: Amazingly short non-sequential url-friendly unique id generator.</li>
 <li><a href="https://www.npmjs.com/package/uuid" target="_blank" rel="external">uuid</a>: Rigorous implementation of RFC4122 (v1 and v4) UUIDs. (time-based or random)</li>
+<li><a href="https://www.npmjs.com/package/passport-local" target="_blank" rel="external">passport-local</a>: Local username and password authentication strategy for Passport.</li>
+<li><a href="https://www.npmjs.com/package/jsonwebtoken" target="_blank" rel="external">jsonwebtoken</a>: JSON Web Token implementation (symmetric and asymmetric)</li>
 </ul>
 <h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><ul>
 <li><a href="https://www.npmjs.com/package/axios" target="_blank" rel="external">axios</a>: Promise based HTTP client for the browser and node.js</li>
 <li><a href="https://www.npmjs.com/package/superagent" target="_blank" rel="external">superagent</a>: elegant &amp; feature rich browser / node HTTP with a fluent API</li>
+<li><a href="https://www.npmjs.com/package/morgan" target="_blank" rel="external">morgan</a>: HTTP request logger middleware for node.js</li>
+<li><a href="https://www.npmjs.com/package/body-parser" target="_blank" rel="external">body-parser</a>: Node.js body parsing middleware</li>
+</ul>
+<h2 id="Web-Dev"><a href="#Web-Dev" class="headerlink" title="Web Dev"></a>Web Dev</h2><ul>
+<li><a href="https://www.npmjs.com/package/cookie-parser" target="_blank" rel="external">cookie-parser</a>: cookie parsing with signatures</li>
+<li><a href="https://www.npmjs.com/package/express-session" target="_blank" rel="external">express-session</a>: Simple session middleware for Express</li>
 </ul>
 <h2 id="Image"><a href="#Image" class="headerlink" title="Image"></a>Image</h2><ul>
 <li><a href="https://github.com/EyalAr/lwip" target="_blank" rel="external">lwip</a>: Light Weight Image Processor for NodeJS (w/o any dependency)</li>
 </ul>
 <h2 id="Guvenlik"><a href="#Guvenlik" class="headerlink" title="Güvenlik"></a>Güvenlik</h2><ul>
 <li><a href="https://www.npmjs.com/package/bcrypt" target="_blank" rel="external">bcrypt</a>: A bcrypt library for NodeJS.</li>
+</ul>
+<h2 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h2><ul>
+<li><a href="https://www.npmjs.com/package/chai" target="_blank" rel="external">chai</a>: BDD/TDD assertion library for node.js and the browser. Test framework agnostic.</li>
+<li><a href="https://www.npmjs.com/package/chai-http" target="_blank" rel="external">chai-http</a>: Extend Chai Assertion library with tests for http apis</li>
+<li><a href="https://www.npmjs.com/package/mocha" target="_blank" rel="external">mocha</a>: Simple, flexible, fun test framework</li>
+</ul>
+<h2 id="Muhtelif"><a href="#Muhtelif" class="headerlink" title="Muhtelif"></a>Muhtelif</h2><ul>
+<li><a href="https://www.npmjs.com/package/debug" target="_blank" rel="external">debug</a>: Tiny node.js debugging utility modelled after node core’s debugging technique.</li>
 </ul>
 ]]></content>
     
@@ -161,6 +247,7 @@
 &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/knex&quot;&gt;knex&lt;/a&gt;: A batteries-included SQL query &amp;amp; schema builder for Postgres, MySQL and SQLite3 and the Browser&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/pg&quot;&gt;pg&lt;/a&gt;: PostgreSQL client - pure javascript &amp;amp; libpq with the same API&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/bookshelf&quot;&gt;bookshelf&lt;/a&gt;: A lightweight ORM for PostgreSQL, MySQL, and SQLite3&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/mongoose&quot;&gt;mongoose&lt;/a&gt;: Mongoose MongoDB ODM&lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>
@@ -177,7 +264,7 @@
     <link href="https://onort.github.io/javascript-es6-node/"/>
     <id>https://onort.github.io/javascript-es6-node/</id>
     <published>2016-11-08T13:05:19.000Z</published>
-    <updated>2016-11-15T15:09:45.729Z</updated>
+    <updated>2016-12-04T18:32:36.503Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://nodesource.com/blog/six-of-the-most-exciting-es6-features-in-node-js-v6-lts?utm_source=nodeweekly&amp;utm_medium=email" target="_blank" rel="external">Exiting ES6 features for NodeJS</a></p>
 <h2 id="Setting-defaults-for-function-parameters"><a href="#Setting-defaults-for-function-parameters" class="headerlink" title="Setting defaults for function parameters"></a>Setting defaults for function parameters</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">toThePower</span>(<span class="params">value, exponent = <span class="number">2</span></span>) </span>&#123;</div><div class="line">  <span class="comment">// The rest of your code</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">toThePower(<span class="number">1</span>, <span class="literal">undefined</span>) <span class="comment">// exponent defaults to 2</span></div></pre></td></tr></table></figure>
@@ -187,7 +274,8 @@
 <h2 id="find-findIndex"><a href="#find-findIndex" class="headerlink" title="find/findIndex"></a>find/findIndex</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> ages = [<span class="number">12</span>, <span class="number">19</span>, <span class="number">6</span>, <span class="number">4</span>];</div><div class="line"></div><div class="line"><span class="keyword">let</span> firstAdult = ages.find(<span class="function"><span class="params">age</span> =&gt;</span> age &gt;= <span class="number">18</span>); <span class="comment">// 19</span></div><div class="line"><span class="keyword">let</span> firstAdultIndex = ages.findIndex(<span class="function"><span class="params">age</span> =&gt;</span> age &gt;= <span class="number">18</span>); <span class="comment">// 1</span></div></pre></td></tr></table></figure>
 <h2 id="Allowing-Extra-Arguments-in-Functions"><a href="#Allowing-Extra-Arguments-in-Functions" class="headerlink" title="Allowing Extra Arguments in Functions"></a>Allowing Extra Arguments in Functions</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">concat</span>(<span class="params">joiner, ...args</span>) </span>&#123;</div><div class="line"></div><div class="line">  <span class="comment">// args is an actual Array</span></div><div class="line"></div><div class="line">  <span class="keyword">return</span> args.join(joiner)</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">concat(‘_’, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>) <span class="comment">// returns ‘1_2_3’</span></div></pre></td></tr></table></figure>
 <h2 id="Expanding-Arrays-with-the-Spread-Operator"><a href="#Expanding-Arrays-with-the-Spread-Operator" class="headerlink" title="Expanding Arrays with the Spread Operator"></a>Expanding Arrays with the Spread Operator</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>]</div><div class="line"></div><div class="line"><span class="keyword">const</span> arr2 = [...arr1, <span class="number">3</span>, <span class="number">4</span>]</div><div class="line"><span class="comment">// arr2: [1, 2, 3, 4]</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> numbers = [<span class="number">9</span>, <span class="number">4</span>, <span class="number">7</span>, <span class="number">1</span>];</div><div class="line"><span class="built_in">Math</span>.min(...numbers); <span class="comment">// 1</span></div></pre></td></tr></table></figure>
-]]></content>
+<h2 id="for-…-of"><a href="#for-…-of" class="headerlink" title="for … of"></a>for … of</h2><p>The <code>for...of</code> statement creates a loop iterating over iterable objects (including Array, Map, Set, String, TypedArray, arguments object and so on), invoking a custom iteration hook with statements to be executed for the value of each distinct property.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Syntax</span></div><div class="line"><span class="keyword">for</span> (variable <span class="keyword">of</span> iterable) &#123;</div><div class="line">  statement</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">let</span> iterable = <span class="string">"boo"</span>;</div><div class="line"></div><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> value <span class="keyword">of</span> iterable) &#123;</div><div class="line">  <span class="built_in">console</span>.log(value);</div><div class="line">&#125;</div><div class="line"><span class="comment">// "b"</span></div><div class="line"><span class="comment">// "o"</span></div><div class="line"><span class="comment">// "o"</span></div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -312,7 +400,7 @@
     <link href="https://onort.github.io/vs-code-kisayollar/"/>
     <id>https://onort.github.io/vs-code-kisayollar/</id>
     <published>2016-10-20T20:37:15.000Z</published>
-    <updated>2016-11-06T13:36:27.884Z</updated>
+    <updated>2016-11-23T15:51:10.775Z</updated>
     
     <content type="html"><![CDATA[<p>Visual Studio Code (Linux) için klavye kısayolları derleme.</p>
 <h2 id="Genel-Editor-Kisayollari"><a href="#Genel-Editor-Kisayollari" class="headerlink" title="Genel Editör Kısayolları"></a>Genel Editör Kısayolları</h2><table>
@@ -338,6 +426,10 @@
 <tr>
 <td><code>Ctrl+\</code></td>
 <td>Split editor</td>
+</tr>
+<tr>
+<td><code>Ctrl+B</code></td>
+<td>Toggle Sidebar</td>
 </tr>
 </tbody>
 </table>
@@ -441,12 +533,20 @@
 </thead>
 <tbody>
 <tr>
+<td><code>Ctrl+` </code></td>
+<td>Open Integrated Terminal</td>
+</tr>
+<tr>
 <td><code>Ctrl+Space</code></td>
 <td>Trigger suggestion</td>
 </tr>
 <tr>
 <td><code>Ctrl+Shift+Space</code></td>
 <td>Trigger parameter hints</td>
+</tr>
+<tr>
+<td><code>Ctl+K M</code></td>
+<td>Change Language Mode</td>
 </tr>
 <tr>
 <td><code>Ctrl+K V</code></td>
@@ -483,6 +583,10 @@
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;Ctrl+\&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Split editor&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Ctrl+B&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Toggle Sidebar&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
