@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://onort.github.io/"/>
-  <updated>2016-12-04T18:29:06.079Z</updated>
+  <updated>2017-02-05T21:31:22.904Z</updated>
   <id>https://onort.github.io/</id>
   
   <author>
@@ -16,15 +16,86 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>VueJS API ve Notlar</title>
+    <link href="https://onort.github.io/vue/"/>
+    <id>https://onort.github.io/vue/</id>
+    <published>2017-02-05T20:10:36.000Z</published>
+    <updated>2017-02-05T21:31:22.904Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">v-on:click="myFunc"</div><div class="line">@click="myFunc"</div><div class="line"></div><div class="line">v-bind:title="myString"</div><div class="line">:title="myString"</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>data</strong></li>
+<li><strong>methods</strong></li>
+<li><strong>computed</strong></li>
+<li><strong>props</strong></li>
+<li>You can chain <strong>filters</strong> in Vue templates.</li>
+<li><strong>watch</strong> While computed properties are more appropriate in most cases, there are times when a custom watcher is necessary. This is most useful when you want to perform asynchronous or expensive operations in response to changing data. (e.g. debounce)<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">watch: &#123;</div><div class="line">  <span class="attr">myInput</span>: _.debounce(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="keyword">this</span>.buttonText = <span class="keyword">this</span>.myInput !== <span class="string">''</span> ? <span class="string">"Add "</span> + <span class="keyword">this</span>.myInput : <span class="string">"Add Dinosaur"</span> &#125;, <span class="number">250</span>)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="API"><a href="#API" class="headerlink" title="API:"></a>API:</h2><ul>
+<li>v-on:<event> <code>v-on:click</code> or <code>@click</code></event></li>
+<li>v-bind:<properity> <code>v-bind:class</code> or <code>:class</code>. We can use conditionally it with a boolean value as well like: <code>:class=&quot;{ &#39;loading&#39;: isLoading }&quot;</code>. You can combine multiple checks with an array <code>&lt;button class=&quot;[sizeToggle ? &#39;large&#39; : &#39;&#39;, {&#39;rounded&#39;: isRounded}]&quot;</code> You can pass a style object, containing css styling key, value pairs.</properity></li>
+<li>v-text for writing text to a html element <code>&lt;li v-text=&quot;task.description&quot;&gt;&lt;/li&gt;</code></li>
+<li>v-model</li>
+<li>v-for for iterating <code>v-for=&quot;task in tasks&quot;</code>, you can also pass index <code>&lt;li v-for=&quot;(item, index) in items&quot;&gt;</code></li>
+<li>v-if=”<boolean>“ for conditional rendering <code>v-if=&quot;task.completed</code></boolean></li>
+<li>v-else</li>
+<li>v-show=”<boolean>“</boolean></li>
+<li>inline-template <code>&lt;progress-view inline-template&gt;......&lt;/progress-view&gt;</code> converts html to template for component</li>
+<li>v-html <code>&lt;div v-html=&quot;htmlToAdd&quot;&gt;&lt;/div&gt;</code> you can insert HTML inside an element</li>
+<li>v-pre <code>&lt;h1 v-pre&gt;&lt;/h1&gt;</code></li>
+<li>v-one <code>&lt;p v-one&gt;...&lt;/p&gt;</code> Renders only one time, won’t re-render if data changes</li>
+<li>v-cloak <code>&lt;div v-cloak&gt;&lt;/div&gt;</code> Won’t render until vue intiliazed and view is ready (you need to add to your css <code>[v-cloak] { display: none; }</code>)</li>
+</ul>
+<ul>
+<li>$emit: Emits events for parent component, you can use it as <code>this.$emit</code> methods or inline in template <code>&lt;button @click=&quot;$emit(&#39;toggle&#39;)</code> and at parent component <code>&lt;todo @toggle=&quot;toggleTodo(todo)&quot;&gt;&lt;/todo&gt;</code></li>
+<li>$on: For listening to events in components/instances</li>
+<li>$event</li>
+<li>$refs</li>
+<li>$children</li>
+<li>$data: <code>this.$data</code> for whole data object</li>
+<li><p>event.eventmodifier: <code>&lt;form @submit.prevent=&quot;onSubmit&quot;&gt;&lt;/form&gt;</code> .prevent == preventDefault()</p>
+</li>
+<li><p><code>&lt;transition&gt;</code> is a component wraping your elements/components in order to add animation. You can also specify transition modes.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">transition</span> <span class="attr">name</span>=<span class="string">"fade"</span> <span class="attr">mode</span>=<span class="string">"out-in"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"fade"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">transition</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line">  fade &#123;transition: opacity .5s ease;&#125;</div><div class="line">  fade-enter, fade-leave-acitve &#123;opacity: 0;&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Vue-Router"><a href="#Vue-Router" class="headerlink" title="Vue Router"></a>Vue Router</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</div><div class="line"><span class="keyword">import</span> VueRouter <span class="keyword">from</span> <span class="string">'vue-router'</span>;</div><div class="line"></div><div class="line">Vue.use(VueRouter);</div><div class="line"></div><div class="line"><span class="keyword">const</span> routes = <span class="keyword">new</span> VueRouter(&#123;</div><div class="line">  <span class="attr">mode</span>: <span class="string">'history'</span>,</div><div class="line">  <span class="attr">routes</span>: [</div><div class="line">    &#123; <span class="attr">path</span>: <span class="string">'/'</span>, <span class="attr">component</span>: App &#125;,</div><div class="line">    &#123; <span class="attr">path</span>: <span class="string">'/post/:id'</span>, <span class="attr">component</span>: Post &#125;</div><div class="line">  ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<ul>
+<li>VueRouter will render component inside <code>&lt;router-view&gt;&lt;/router-view&gt;</code> tag. </li>
+<li>By default VueRouter uses <code>/#/</code> mode. To use history mode add <code>mode: &#39;history&#39;</code>, if history mode is not supperted (IE9) it will fallback to hash mode.</li>
+<li>To navigate between routes you need <code>&lt;router-link to=&quot;/post/1&quot;&gt;</code> tag. It’ll add an <code>&lt;a&gt;</code> tag.</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Notes&quot;&gt;&lt;a href=&quot;#Notes&quot; class=&quot;headerlink&quot; title=&quot;Notes&quot;&gt;&lt;/a&gt;Notes&lt;/h2&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;
+    
+    </summary>
+    
+      <category term="Cheatsheet" scheme="https://onort.github.io/kategori/Cheatsheet/"/>
+    
+      <category term="Vue" scheme="https://onort.github.io/kategori/Cheatsheet/Vue/"/>
+    
+    
+      <category term="front-end" scheme="https://onort.github.io/tags/front-end/"/>
+    
+      <category term="javascript" scheme="https://onort.github.io/tags/javascript/"/>
+    
+      <category term="vue" scheme="https://onort.github.io/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Itaretors &amp; Generators</title>
     <link href="https://onort.github.io/iterators-generators/"/>
     <id>https://onort.github.io/iterators-generators/</id>
     <published>2016-12-04T18:05:24.000Z</published>
-    <updated>2016-12-04T18:29:06.079Z</updated>
+    <updated>2017-02-05T21:09:49.513Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Iterators"><a href="#Iterators" class="headerlink" title="Iterators"></a>Iterators</h2><p> In JavaScript an iterator is an object that provides a next() method which returns the next item in the sequence.</p>
-<p> <strong>String, Array, TypedArray, Map</strong> and <strong>Set</strong> are all built-in iterables, because the prototype objects of them all have a <code>Symbol.iterator</code> method.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> myArray = [<span class="number">1</span>,<span class="number">2</span>];</div><div class="line"></div><div class="line"><span class="keyword">let</span> iterator = myArray[<span class="built_in">Symbol</span>.iterator]();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(iterator.next()); <span class="comment">// &#123; done: false, value: 1 &#125;</span></div><div class="line"><span class="built_in">console</span>.log(iterator.next()); <span class="comment">// &#123; done: false, value: 2 &#125;</span></div><div class="line"><span class="built_in">console</span>.log(iterator.next()); <span class="comment">// &#123; done: true, value: undefined &#125;</span></div></pre></td></tr></table></figure>
+<p> <strong>String, Array, TypedArray, Map</strong> and <strong>Set</strong> are all built-in iterables, because the prototype objects of them all have a <code>Symbol.iterator</code> method.<br><a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> myArray = [<span class="number">1</span>,<span class="number">2</span>];</div><div class="line"></div><div class="line"><span class="keyword">let</span> iterator = myArray[<span class="built_in">Symbol</span>.iterator]();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(iterator.next()); <span class="comment">// &#123; done: false, value: 1 &#125;</span></div><div class="line"><span class="built_in">console</span>.log(iterator.next()); <span class="comment">// &#123; done: false, value: 2 &#125;</span></div><div class="line"><span class="built_in">console</span>.log(iterator.next()); <span class="comment">// &#123; done: true, value: undefined &#125;</span></div></pre></td></tr></table></figure></p>
 <h2 id="Generators"><a href="#Generators" class="headerlink" title="Generators"></a>Generators</h2><p>A generator is a special type of function that works as a factory for iterators. A function becomes a generator if it contains one or more <code>yield</code> expressions and if it uses the <code>function*</code> syntax.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span>* <span class="title">generator</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">yield</span> <span class="number">1</span>;</div><div class="line">  <span class="keyword">yield</span> <span class="number">2</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">let</span> iterator = generator();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(iterator.next()); <span class="comment">// &#123; done: false, value: 1 &#125;</span></div><div class="line"><span class="built_in">console</span>.log(iterator.next()); <span class="comment">// &#123; done: false, value: 2 &#125;</span></div><div class="line"><span class="built_in">console</span>.log(iterator.next()); <span class="comment">// &#123; done: true, value: undefined &#125;</span></div></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span>* <span class="title">generator</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">yield</span> <span class="number">1</span>;</div><div class="line">  <span class="keyword">yield</span>* anotherGenerator();</div><div class="line">  <span class="keyword">yield</span> <span class="number">3</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span>* <span class="title">anotherGenerator</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">yield</span> <span class="number">2</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">let</span> iterator = generator();</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(iterator.next()); <span class="comment">// &#123; done: false, value: 1 &#125;</span></div><div class="line"><span class="built_in">console</span>.log(iterator.next()); <span class="comment">// &#123; done: false, value: 2 &#125;</span></div><div class="line"><span class="built_in">console</span>.log(iterator.next()); <span class="comment">// &#123; done: false, value: 3 &#125;</span></div><div class="line"><span class="built_in">console</span>.log(iterator.next()); <span class="comment">// &#123; done: true, value: undefined &#125;</span></div></pre></td></tr></table></figure>
@@ -33,11 +104,12 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;Iterators&quot;&gt;&lt;a href=&quot;#Iterators&quot; class=&quot;headerlink&quot; title=&quot;Iterators&quot;&gt;&lt;/a&gt;Iterators&lt;/h2&gt;&lt;p&gt; In JavaScript an iterator is an object th
+      &lt;h2 id=&quot;Iterators&quot;&gt;&lt;a href=&quot;#Iterators&quot; class=&quot;headerlink&quot; title=&quot;Iterators&quot;&gt;&lt;/a&gt;Iterators&lt;/h2&gt;&lt;p&gt; In JavaScript an iterator is an object that provides a next() method which returns the next item in the sequence.&lt;/p&gt;
+&lt;p&gt; &lt;strong&gt;String, Array, TypedArray, Map&lt;/strong&gt; and &lt;strong&gt;Set&lt;/strong&gt; are all built-in iterables, because the prototype objects of them all have a &lt;code&gt;Symbol.iterator&lt;/code&gt; method.&lt;br&gt;
     
     </summary>
     
-      <category term="JavaScript" scheme="https://onort.github.io/kategori/JavaScript/"/>
+      <category term="Javascript" scheme="https://onort.github.io/kategori/Javascript/"/>
     
     
       <category term="vanilla javascript" scheme="https://onort.github.io/tags/vanilla-javascript/"/>
@@ -51,7 +123,7 @@
     <link href="https://onort.github.io/express-js-nasil/"/>
     <id>https://onort.github.io/express-js-nasil/</id>
     <published>2016-11-21T17:38:59.000Z</published>
-    <updated>2016-11-21T17:41:30.146Z</updated>
+    <updated>2017-02-05T20:13:48.381Z</updated>
     
     <content type="html"><![CDATA[<h3 id="res-locals"><a href="#res-locals" class="headerlink" title="res.locals"></a>res.locals</h3><p>An object that contains response local variables scoped to the request, and therefore available only to the view(s) rendered during that request / response cycle (if any).</p>
 <p>This property is <strong>useful for exposing request-level information</strong> such as the request path name, authenticated user, user settings, and so on.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">app.use(<span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>)</span>&#123;</div><div class="line">  res.locals.user = req.user;</div><div class="line">  res.locals.authenticated = ! req.user.anonymous;</div><div class="line">  next();</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
@@ -75,7 +147,7 @@
     <link href="https://onort.github.io/immutable-js-nasil/"/>
     <id>https://onort.github.io/immutable-js-nasil/</id>
     <published>2016-11-17T19:11:54.000Z</published>
-    <updated>2016-11-18T13:42:29.574Z</updated>
+    <updated>2017-02-05T21:10:29.321Z</updated>
     
     <content type="html"><![CDATA[<p>Immutable data cannot be changed once created, leading to much simpler application development, no defensive copying, and enabling advanced memoization and change detection techniques with simple logic. Persistent data presents a mutative API which does not update the data in-place, but instead always yields new updated data.</p>
 <ul>
@@ -136,9 +208,9 @@
     
     </summary>
     
-      <category term="Kopya" scheme="https://onort.github.io/kategori/Kopya/"/>
+      <category term="Cheetsheet" scheme="https://onort.github.io/kategori/Cheetsheet/"/>
     
-      <category term="Javascript" scheme="https://onort.github.io/kategori/Kopya/Javascript/"/>
+      <category term="Javascript" scheme="https://onort.github.io/kategori/Cheetsheet/Javascript/"/>
     
     
       <category term="javascript tooling" scheme="https://onort.github.io/tags/javascript-tooling/"/>
@@ -200,7 +272,7 @@
     <link href="https://onort.github.io/node-paketler/"/>
     <id>https://onort.github.io/node-paketler/</id>
     <published>2016-11-08T18:45:56.000Z</published>
-    <updated>2016-11-23T15:12:35.021Z</updated>
+    <updated>2017-01-30T12:41:57.283Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Database"><a href="#Database" class="headerlink" title="Database"></a>Database</h2><ul>
 <li><a href="https://www.npmjs.com/package/knex" target="_blank" rel="external">knex</a>: A batteries-included SQL query &amp; schema builder for Postgres, MySQL and SQLite3 and the Browser</li>
@@ -214,6 +286,7 @@
 <li><a href="https://www.npmjs.com/package/uuid" target="_blank" rel="external">uuid</a>: Rigorous implementation of RFC4122 (v1 and v4) UUIDs. (time-based or random)</li>
 <li><a href="https://www.npmjs.com/package/passport-local" target="_blank" rel="external">passport-local</a>: Local username and password authentication strategy for Passport.</li>
 <li><a href="https://www.npmjs.com/package/jsonwebtoken" target="_blank" rel="external">jsonwebtoken</a>: JSON Web Token implementation (symmetric and asymmetric)</li>
+<li><a href="https://www.npmjs.com/package/boom" target="_blank" rel="external">boom</a>: HTTP-friendly error objects</li>
 </ul>
 <h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><ul>
 <li><a href="https://www.npmjs.com/package/axios" target="_blank" rel="external">axios</a>: Promise based HTTP client for the browser and node.js</li>
@@ -224,6 +297,7 @@
 <h2 id="Web-Dev"><a href="#Web-Dev" class="headerlink" title="Web Dev"></a>Web Dev</h2><ul>
 <li><a href="https://www.npmjs.com/package/cookie-parser" target="_blank" rel="external">cookie-parser</a>: cookie parsing with signatures</li>
 <li><a href="https://www.npmjs.com/package/express-session" target="_blank" rel="external">express-session</a>: Simple session middleware for Express</li>
+<li><a href="https://www.npmjs.com/package/concurrently" target="_blank" rel="external">concurrently</a>: un multiple commands concurrently. Like npm run watch-js &amp; npm run watch-less but better.</li>
 </ul>
 <h2 id="Image"><a href="#Image" class="headerlink" title="Image"></a>Image</h2><ul>
 <li><a href="https://github.com/EyalAr/lwip" target="_blank" rel="external">lwip</a>: Light Weight Image Processor for NodeJS (w/o any dependency)</li>
@@ -400,7 +474,7 @@
     <link href="https://onort.github.io/vs-code-kisayollar/"/>
     <id>https://onort.github.io/vs-code-kisayollar/</id>
     <published>2016-10-20T20:37:15.000Z</published>
-    <updated>2016-11-23T15:51:10.775Z</updated>
+    <updated>2017-02-05T21:11:01.830Z</updated>
     
     <content type="html"><![CDATA[<p>Visual Studio Code (Linux) için klavye kısayolları derleme.</p>
 <h2 id="Genel-Editor-Kisayollari"><a href="#Genel-Editor-Kisayollari" class="headerlink" title="Genel Editör Kısayolları"></a>Genel Editör Kısayolları</h2><table>
@@ -593,7 +667,7 @@
     
     </summary>
     
-      <category term="Kopya" scheme="https://onort.github.io/kategori/Kopya/"/>
+      <category term="Cheetsheet" scheme="https://onort.github.io/kategori/Cheetsheet/"/>
     
     
       <category term="verimlilik" scheme="https://onort.github.io/tags/verimlilik/"/>
@@ -609,47 +683,47 @@
     <link href="https://onort.github.io/gulp-pluginler/"/>
     <id>https://onort.github.io/gulp-pluginler/</id>
     <published>2016-10-05T15:37:39.000Z</published>
-    <updated>2016-11-08T13:13:06.529Z</updated>
+    <updated>2017-02-05T21:14:17.000Z</updated>
     
     <content type="html"><![CDATA[<p>Bir takım Gulp pluginleri, hafif kategorize</p>
 <h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><ul>
-<li><a href="https://github.com/dlmanning/gulp-sass" target="_blank" rel="external"><code>gulp-sass</code></a>- Sass → CSS with libsass.</li>
-<li><a href="https://github.com/scniro/gulp-clean-css" target="_blank" rel="external"><code>gulp-clean-css</code></a> - Minify CSS with clean-css.</li>
-<li><a href="https://github.com/ben-eb/gulp-uncss" target="_blank" rel="external"><code>gulp-uncss</code></a> - Remove unused CSS selectors with UnCSS.</li>
-<li><a href="https://www.npmjs.com/package/gulp-csslint" target="_blank" rel="external"><code>gulp-csslint</code></a> - Automated linting of CSS with CSSLint.</li>
-<li><a href="https://github.com/postcss/autoprefixer" target="_blank" rel="external"><code>autoprefixer</code></a> - Parse CSS and add vendor prefixes to rules by Can I Use.</li>
+<li><a href="https://github.com/dlmanning/gulp-sass" target="_blank" rel="external">gulp-sass</a>- Sass → CSS with libsass.</li>
+<li><a href="https://github.com/scniro/gulp-clean-css" target="_blank" rel="external">gulp-clean-css</a> - Minify CSS with clean-css.</li>
+<li><a href="https://github.com/ben-eb/gulp-uncss" target="_blank" rel="external">gulp-uncss</a> - Remove unused CSS selectors with UnCSS.</li>
+<li><a href="https://www.npmjs.com/package/gulp-csslint" target="_blank" rel="external">gulp-csslint</a> - Automated linting of CSS with CSSLint.</li>
+<li><a href="https://github.com/postcss/autoprefixer" target="_blank" rel="external">autoprefixer</a> - Parse CSS and add vendor prefixes to rules by Can I Use.</li>
 </ul>
 <a id="more"></a>
 <h2 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h2><ul>
-<li><a href="https://github.com/terinjokes/gulp-uglify" target="_blank" rel="external"><code>gulp-uglify</code></a> - Minify JavaScript with UglifyJS2.</li>
-<li><a href="https://github.com/babel/gulp-babel" target="_blank" rel="external"><code>gulp-babel</code></a> - ES6 → ES5 with babel.</li>
-<li><a href="https://github.com/spalger/gulp-jshint" target="_blank" rel="external"><code>gulp-jshint</code></a> - Detect errors and potential problems in JavaScript with JSHint.</li>
+<li><a href="https://github.com/terinjokes/gulp-uglify" target="_blank" rel="external">gulp-uglify</a> - Minify JavaScript with UglifyJS2.</li>
+<li><a href="https://github.com/babel/gulp-babel" target="_blank" rel="external">gulp-babel</a> - ES6 → ES5 with babel.</li>
+<li><a href="https://github.com/spalger/gulp-jshint" target="_blank" rel="external">gulp-jshint</a> - Detect errors and potential problems in JavaScript with JSHint.</li>
 </ul>
 <h2 id="HTML-ve-HTML-Templating"><a href="#HTML-ve-HTML-Templating" class="headerlink" title="HTML ve HTML Templating"></a>HTML ve HTML Templating</h2><ul>
-<li><a href="https://github.com/murphydanger/gulp-minify-html" target="_blank" rel="external"><code>gulp-minify-html</code></a> - Minify HTML with Minimize.</li>
-<li><a href="https://github.com/phated/gulp-jade" target="_blank" rel="external"><code>gulp-jade</code></a> - Jade → HTML.</li>
-<li><a href="https://github.com/zalando/gulp-check-unused-css" target="_blank" rel="external"><code>gulp-check-unused-css</code></a> - Check your HTML templates for unused CSS classes.</li>
-<li><a href="https://github.com/sindresorhus/gulp-markdown" target="_blank" rel="external"><code>gulp-markdown</code></a> - Markdown → HTML.</li>
-<li><a href="https://github.com/bezoerb/gulp-htmlhint" target="_blank" rel="external"><code>gulp-htmlhint</code></a> - HTMLHint wrapper to validate your HTML.</li>
+<li><a href="https://github.com/murphydanger/gulp-minify-html" target="_blank" rel="external">gulp-minify-html</a> - Minify HTML with Minimize.</li>
+<li><a href="https://github.com/phated/gulp-jade" target="_blank" rel="external">gulp-jade</a> - Jade → HTML.</li>
+<li><a href="https://github.com/zalando/gulp-check-unused-css" target="_blank" rel="external">gulp-check-unused-css</a> - Check your HTML templates for unused CSS classes.</li>
+<li><a href="https://github.com/sindresorhus/gulp-markdown" target="_blank" rel="external">gulp-markdown</a> - Markdown → HTML.</li>
+<li><a href="https://github.com/bezoerb/gulp-htmlhint" target="_blank" rel="external">gulp-htmlhint</a> - HTMLHint wrapper to validate your HTML.</li>
 </ul>
 <h2 id="Optimizasyon"><a href="#Optimizasyon" class="headerlink" title="Optimizasyon"></a>Optimizasyon</h2><ul>
-<li><a href="https://github.com/sindresorhus/gulp-imagemin" target="_blank" rel="external"><code>gulp-imagemin</code></a> - Minify PNG, JPEG, GIF and SVG images with imagemin.</li>
-<li><a href="https://github.com/zckrs/gulp-css-base64" target="_blank" rel="external"><code>gulp-css-base64</code></a> - Transform all resources found (those within a url() declaration) in CSS files into base64-encoded data URI strings.</li>
-<li><a href="https://github.com/mahnunchik/gulp-responsive" target="_blank" rel="external"><code>gulp-responsive</code></a> - Generate images at different sizes.</li>
-</ul>
-<h2 id="Ozel-Degil-Genel-Genel"><a href="#Ozel-Degil-Genel-Genel" class="headerlink" title="Özel Değil; Genel Genel"></a>Özel Değil; Genel Genel</h2><ul>
-<li><a href="https://github.com/robrich/gulp-if" target="_blank" rel="external"><code>gulp-if</code></a> - Conditionally run a task.</li>
-<li><a href="https://github.com/contra/gulp-concat" target="_blank" rel="external"><code>gulp-concat</code></a> - Concatenate files.</li>
-<li><a href="https://github.com/hparra/gulp-rename" target="_blank" rel="external"><code>gulp-rename</code></a> - Rename files easily.</li>
-<li><a href="https://github.com/sindresorhus/del" target="_blank" rel="external"><code>del</code></a> - Delete files/folders using globs.</li>
-<li><a href="https://github.com/floridoo/gulp-sourcemaps" target="_blank" rel="external"><code>gulp-sourcemaps</code></a> - Provide source map support.</li>
-<li><a href="https://github.com/robrich/gulp-exec" target="_blank" rel="external"><code>gulp-exec</code></a> - Run a shell command.</li>
-<li><a href="https://github.com/gulpjs/gulp-util" target="_blank" rel="external"><code>gulp-util</code></a> - Set of useful utilities.</li>
-<li><a href="https://github.com/floatdrop/gulp-plumber" target="_blank" rel="external"><code>gulp-plumber</code></a> - Prevent pipe breaking caused by errors.</li>
+<li><a href="https://github.com/sindresorhus/gulp-imagemin" target="_blank" rel="external">gulp-imagemin</a> - Minify PNG, JPEG, GIF and SVG images with imagemin.</li>
+<li><a href="https://github.com/zckrs/gulp-css-base64" target="_blank" rel="external">gulp-css-base64</a> - Transform all resources found (those within a url() declaration) in CSS files into base64-encoded data URI strings.</li>
+<li><a href="https://github.com/mahnunchik/gulp-responsive" target="_blank" rel="external">gulp-responsive</a> - Generate images at different sizes.</li>
 </ul>
 <h2 id="Muhtelif"><a href="#Muhtelif" class="headerlink" title="Muhtelif"></a>Muhtelif</h2><ul>
-<li><a href="https://github.com/BrowserSync/browser-sync" target="_blank" rel="external"><code>browser-sync</code></a> - Keep multiple browsers &amp; devices in sync when building websites (recipes).</li>
-<li><a href="https://github.com/shama/webpack-stream" target="_blank" rel="external"><code>webpack-stream</code></a> - Run webpack as a stream to conveniently integrate with gulp.</li>
+<li><a href="https://github.com/robrich/gulp-if" target="_blank" rel="external">gulp-if</a> - Conditionally run a task.</li>
+<li><a href="https://github.com/contra/gulp-concat" target="_blank" rel="external">gulp-concat</a> - Concatenate files.</li>
+<li><a href="https://github.com/hparra/gulp-rename" target="_blank" rel="external">gulp-rename</a> - Rename files easily.</li>
+<li><a href="https://github.com/sindresorhus/del" target="_blank" rel="external">del</a> - Delete files/folders using globs.</li>
+<li><a href="https://github.com/floridoo/gulp-sourcemaps" target="_blank" rel="external">gulp-sourcemaps</a> - Provide source map support.</li>
+<li><a href="https://github.com/robrich/gulp-exec" target="_blank" rel="external">gulp-exec</a> - Run a shell command.</li>
+<li><a href="https://github.com/gulpjs/gulp-util" target="_blank" rel="external">gulp-util</a> - Set of useful utilities.</li>
+<li><a href="https://github.com/floatdrop/gulp-plumber" target="_blank" rel="external">gulp-plumber</a> - Prevent pipe breaking caused by errors.</li>
+</ul>
+<h2 id="Muhtelif-1"><a href="#Muhtelif-1" class="headerlink" title="Muhtelif"></a>Muhtelif</h2><ul>
+<li><a href="https://github.com/BrowserSync/browser-sync" target="_blank" rel="external">browser-sync</a> - Keep multiple browsers &amp; devices in sync when building websites (recipes).</li>
+<li><a href="https://github.com/shama/webpack-stream" target="_blank" rel="external">webpack-stream</a> - Run webpack as a stream to conveniently integrate with gulp.</li>
 </ul>
 <p>Daha fazlası için <a href="https://github.com/alferov/awesome-gulp#plugins" target="_blank" rel="external">Awesome Gulp</a></p>
 ]]></content>
@@ -658,16 +732,16 @@
     
       &lt;p&gt;Bir takım Gulp pluginleri, hafif kategorize&lt;/p&gt;
 &lt;h2 id=&quot;CSS&quot;&gt;&lt;a href=&quot;#CSS&quot; class=&quot;headerlink&quot; title=&quot;CSS&quot;&gt;&lt;/a&gt;CSS&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/dlmanning/gulp-sass&quot;&gt;&lt;code&gt;gulp-sass&lt;/code&gt;&lt;/a&gt;- Sass → CSS with libsass.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/scniro/gulp-clean-css&quot;&gt;&lt;code&gt;gulp-clean-css&lt;/code&gt;&lt;/a&gt; - Minify CSS with clean-css.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/ben-eb/gulp-uncss&quot;&gt;&lt;code&gt;gulp-uncss&lt;/code&gt;&lt;/a&gt; - Remove unused CSS selectors with UnCSS.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/gulp-csslint&quot;&gt;&lt;code&gt;gulp-csslint&lt;/code&gt;&lt;/a&gt; - Automated linting of CSS with CSSLint.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/postcss/autoprefixer&quot;&gt;&lt;code&gt;autoprefixer&lt;/code&gt;&lt;/a&gt; - Parse CSS and add vendor prefixes to rules by Can I Use.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dlmanning/gulp-sass&quot;&gt;gulp-sass&lt;/a&gt;- Sass → CSS with libsass.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/scniro/gulp-clean-css&quot;&gt;gulp-clean-css&lt;/a&gt; - Minify CSS with clean-css.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ben-eb/gulp-uncss&quot;&gt;gulp-uncss&lt;/a&gt; - Remove unused CSS selectors with UnCSS.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/gulp-csslint&quot;&gt;gulp-csslint&lt;/a&gt; - Automated linting of CSS with CSSLint.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/postcss/autoprefixer&quot;&gt;autoprefixer&lt;/a&gt; - Parse CSS and add vendor prefixes to rules by Can I Use.&lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>
     
-      <category term="Kopya" scheme="https://onort.github.io/kategori/Kopya/"/>
+      <category term="Cheatsheet" scheme="https://onort.github.io/kategori/Cheatsheet/"/>
     
     
       <category term="gulp" scheme="https://onort.github.io/tags/gulp/"/>
@@ -685,7 +759,7 @@
     <link href="https://onort.github.io/markdown-nasil/"/>
     <id>https://onort.github.io/markdown-nasil/</id>
     <published>2016-09-08T14:47:41.000Z</published>
-    <updated>2016-11-08T15:37:17.089Z</updated>
+    <updated>2017-02-05T21:11:07.126Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Basliklar"><a href="#Basliklar" class="headerlink" title="Başlıklar"></a>Başlıklar</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="section"># h1</span></div><div class="line">...</div><div class="line">...</div><div class="line"><span class="section">###### h6</span></div></pre></td></tr></table></figure>
 <h2 id="Font-Stilleri"><a href="#Font-Stilleri" class="headerlink" title="Font Stilleri"></a>Font Stilleri</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="emphasis">*italik*</span></div><div class="line"><span class="strong">**bold**</span></div><div class="line"><span class="strong">**bold ve _italik_*</span>*</div><div class="line">~~strikethrough~~</div></pre></td></tr></table></figure>
@@ -798,12 +872,14 @@
     
     </summary>
     
-      <category term="Kopya" scheme="https://onort.github.io/kategori/Kopya/"/>
+      <category term="Cheetsheet" scheme="https://onort.github.io/kategori/Cheetsheet/"/>
     
     
       <category term="markdown" scheme="https://onort.github.io/tags/markdown/"/>
     
       <category term="static sites" scheme="https://onort.github.io/tags/static-sites/"/>
+    
+      <category term="documentation" scheme="https://onort.github.io/tags/documentation/"/>
     
   </entry>
   
